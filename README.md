@@ -184,16 +184,7 @@ luccme-goldens/
 
 If you use these reference goldens in scientific research, please cite:
 
-```bibtex
-@article{costa2026reproducible,
-  title={Declarative Spatial Data Cubes and Verifiable Provenance for Reproducible Land-Use Change Modelling: A Three-Level Replication of LuccME},
-  author={Costa, S{\'e}rgio Souza and others},
-  journal={Big Earth Data},
-  year={2026},
-  publisher={Taylor \& Francis}
-}
 
-```
 
 Upstream TerraME and LuccME frameworks are Copyright (C) 2001–2017 INPE and TerraLAB/UFOP.
 
