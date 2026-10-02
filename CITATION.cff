@@ -6,7 +6,7 @@ abstract: "Canonical reference execution outputs (goldens), cryptographic hashes
 version: 1.0.0
 date-released: 2026-10-02
 license: MIT
-doi: "10.5281/zenodo.23107748
+doi: "10.5281/zenodo.23107748"
 url: "https://github.com/LambdaGeo/luccme-goldens"
 repository-code: "https://github.com/LambdaGeo/luccme-goldens"
 keywords:
