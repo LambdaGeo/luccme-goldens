@@ -1,0 +1,6 @@
+# Ignorar shapefiles e arquivos gerados localmente
+goldens/**/*.zip
+goldens/**/*.shp
+goldens/**/*.dbf
+goldens/**/*.shx
+release/*.zip
