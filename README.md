@@ -1,16 +1,13 @@
-
 # luccme-goldens
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23107748.svg)](https://doi.org/10.5281/zenodo.23107748)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Docker Image](https://img.shields.io/badge/Docker-profsergiocosta%2Fterrame--luccme-blue)](https://hub.docker.com/r/profsergiocosta/terrame-luccme)
 [![Open Science](https://img.shields.io/badge/Open%20Science-Reproducible%20Goldens-green.svg)](#)
-[![DOI](https://zenodo.org/badge/1402144728.svg)](https://doi.org/10.5281/zenodo.23107747)
 
 **Canonical Reference Execution Outputs (Goldens) for TerraME 2.0.1 and LuccME 3.1.**
 
-This repository serves as the **Level 1 (Reference Goldens)** foundation for the paper:
-> *"Declarative Spatial Data Cubes and Verifiable Provenance for Reproducible Land-Use Change Modelling: A Three-Level Replication of LuccME"*  
-> Submitted to **Big Earth Data** (Taylor & Francis / CBAS).
+This repository serves as the **Level 1 (Reference Goldens)** foundation for reproducible land-use change modelling across legacy (TerraME/LuccME) and modern data cube environments (`disscube`/`disslucc`).
 
 ---
 
@@ -19,7 +16,7 @@ This repository serves as the **Level 1 (Reference Goldens)** foundation for the
 In environmental simulation science, proving that a newly engineered model (`disslucc` / `disscube`) faithfully replicates a legacy system (`TerraME` / `LuccME`) requires strict numerical parity against immutable reference outputs ("goldens").
 
 Because TerraME 2.0.1 depends on a legacy Ubuntu 18.04 runtime, running the original model scripts on modern operating systems can be difficult. This repository solves that challenge through a dual approach:
-1. **Pre-computed, Verifiable Goldens (No Re-run Needed):** Every reference CSV and baseline dataset is pre-computed, versioned, hashed with SHA-256, and published as a GitHub Release asset (and archived on Zenodo with DOI). Downstream projects ingest them in seconds via `Pooch`.
+1. **Pre-computed, Verifiable Goldens (No Re-run Needed):** Every reference CSV and baseline dataset is pre-computed, versioned, hashed with SHA-256, and published as a GitHub Release asset (and archived on Zenodo with DOI: [10.5281/zenodo.23107748](https://doi.org/10.5281/zenodo.23107748)). Downstream projects ingest them in seconds via `Pooch`.
 2. **Reproducible Generation Harness:** A turnkey Dockerized harness (`profsergiocosta/terrame-luccme`) enables independent peer reviewers to execute all legacy scripts and re-verify every SHA-256 hash from scratch.
 
 ---
@@ -130,14 +127,29 @@ Each run automatically generates:
 * **Canonical CSV (`.csv`)**: Used for numerical parity diffs and tracked in Git.
 * **Zipped Shapefile (`.zip`)**: Ready to open in QGIS/ArcGIS (kept locally; ignored by Git to avoid repository bloat).
 
-### 3. Run All TerraME GIS Fill Cases
+### 3. Run TerraME GIS Fill Cases
+
+To run a single fill case (e.g. Itaituba, Amazônia, or Emas):
+
+```bash
+make run-fill FILL=itaituba
+# Or:
+make run-fill FILL=amazonia
+make run-fill FILL=emas
+
+```
+
+To run all 3 cases in batch:
 
 ```bash
 make run-fill
 
 ```
 
-Executes `itaituba.lua`, `amazonia.lua`, and `emas.lua`, extracting cell attributes.
+Each run automatically generates:
+
+* **Canonical CSV (`.csv`)**: Used for numerical parity diffs and tracked in Git.
+* **Zipped Shapefile (`.zip`)**: Complete shapefile bundle (`.shp`, `.dbf`, `.shx`, `.prj`, `.cpg`) ready to open in QGIS/ArcGIS.
 
 ### 4. Build Release Package and Checksums
 
@@ -156,6 +168,7 @@ Generates `checksums.sha256`, `manifest.json`, and `release/luccme-goldens-v1.0.
 luccme-goldens/
 ├── Makefile                       # Main entry point: run-labs, run-fill, package
 ├── README.md                      # Comprehensive documentation and catalog
+├── CITATION.cff                   # Citation metadata (Zenodo / GitHub integration)
 ├── LICENSE                        # MIT and LGPL-3.0 attribution
 ├── checksums.sha256               # SHA-256 cryptographic hashes of all goldens
 ├── manifest.json                  # Machine-readable artifact manifest
@@ -166,13 +179,13 @@ luccme-goldens/
 │
 ├── scripts/                       # Automated execution and formatting harnesses
 │   ├── run_all_labs.sh            # Batch and single-lab runner for LuccME simulation labs
-│   ├── run_all_fill.sh            # Batch runner for TerraME GIS fill scripts
+│   ├── run_all_fill.sh            # Batch runner for TerraME GIS fill scripts (with .zip packager)
 │   ├── export_reference.py        # Spatial parser converting SHP to standardized CSV
 │   └── package_release.sh         # Release archiver and hash generator
 │
 ├── goldens/                       # Reference outputs
-│   ├── fill/                      # itaituba_terrame.csv, amazonia_terrame.csv, emas_terrame.csv
-│   └── labs/                      # Canonical CSVs (tracked) and .zip shapefiles (local only)
+│   ├── fill/                      # Canonical CSVs and zipped shapefiles (itaituba, amazonia, emas)
+│   └── labs/                      # Canonical CSVs and zipped shapefiles (csAC, cs_moju, lab01-21)
 │
 └── release/                       # Release archive bundle for GitHub Releases / Zenodo
     └── luccme-goldens-v1.0.0.zip
@@ -186,9 +199,11 @@ luccme-goldens/
 If you use these reference goldens in scientific research, please cite:
 
 **APA:**
+
 > Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23107748
 
 **BibTeX:**
+
 ```bibtex
 @software{costa_2026_23107748,
   author       = {Costa, S{\'e}rgio Souza},
@@ -200,6 +215,8 @@ If you use these reference goldens in scientific research, please cite:
   doi          = {10.5281/zenodo.23107748},
   url          = {[https://doi.org/10.5281/zenodo.23107748](https://doi.org/10.5281/zenodo.23107748)}
 }
+
+```
 
 Upstream TerraME and LuccME frameworks are Copyright (C) 2001–2017 INPE and TerraLAB/UFOP.
 
