@@ -1,3 +1,4 @@
+
 # luccme-goldens
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -72,17 +73,18 @@ import pandas as pd
 
 # Download and verify Lab15 baseline
 moju_csv = pooch.retrieve(
-    url="https://github.com/LambdaGeo/luccme-goldens/releases/download/v1.0.0/cs_moju_baseline.csv",
+    url="[https://github.com/LambdaGeo/luccme-goldens/releases/download/v1.0.0/cs_moju_baseline.csv](https://github.com/LambdaGeo/luccme-goldens/releases/download/v1.0.0/cs_moju_baseline.csv)",
     known_hash="sha256:<HASH_FROM_CHECKSUMS>",
 )
 df_moju = pd.read_csv(moju_csv)
 
 # Download and verify Itaituba fill reference
 itaituba_csv = pooch.retrieve(
-    url="https://github.com/LambdaGeo/luccme-goldens/releases/download/v1.0.0/itaituba_terrame.csv",
+    url="[https://github.com/LambdaGeo/luccme-goldens/releases/download/v1.0.0/itaituba_terrame.csv](https://github.com/LambdaGeo/luccme-goldens/releases/download/v1.0.0/itaituba_terrame.csv)",
     known_hash="sha256:<HASH_FROM_CHECKSUMS>",
 )
 df_itaituba = pd.read_csv(itaituba_csv)
+
 ```
 
 ---
@@ -92,31 +94,57 @@ df_itaituba = pd.read_csv(itaituba_csv)
 If you wish to re-execute the legacy TerraME models and regenerate all golden outputs:
 
 ### Prerequisites
+
 * Docker engine installed and running.
 
 ### 1. Pull the Docker Appliance
+
 ```bash
 make docker-pull
 # Or manually:
 docker pull profsergiocosta/terrame-luccme
+
 ```
 
-### 2. Run All LuccME Simulation Labs
+### 2. Run LuccME Simulation Labs
+
+To run a single lab (e.g., Lab 01 or Lab 15):
+
+```bash
+make run-labs LAB=01
+# Or:
+make run-labs LAB=15
+
+```
+
+To run all 21 labs in batch:
+
 ```bash
 make run-labs
+
 ```
-Executes all 21 labs headless using a virtual X server (`Xvfb`) and converts resulting shapefiles to CSV.
+
+Each run automatically generates:
+
+* **Canonical CSV (`.csv`)**: Used for numerical parity diffs and tracked in Git.
+* **Zipped Shapefile (`.zip`)**: Ready to open in QGIS/ArcGIS (kept locally; ignored by Git to avoid repository bloat).
 
 ### 3. Run All TerraME GIS Fill Cases
+
 ```bash
 make run-fill
+
 ```
+
 Executes `itaituba.lua`, `amazonia.lua`, and `emas.lua`, extracting cell attributes.
 
 ### 4. Build Release Package and Checksums
+
 ```bash
 make package
+
 ```
+
 Generates `checksums.sha256`, `manifest.json`, and `release/luccme-goldens-v1.0.0.zip`.
 
 ---
@@ -132,21 +160,22 @@ luccme-goldens/
 ├── manifest.json                  # Machine-readable artifact manifest
 │
 ├── sources/                       # Canonical upstream model scripts and input layers
-│   ├── labs/                      # lab01.lua to lab21.lua + test shapefiles (Acre & Moju)
+│   ├── labs/                      # lab01.lua to lab21.lua (LuccME 3.1 upstream models)
 │   └── fill/                      # itaituba.lua, amazonia.lua, emas.lua
 │
 ├── scripts/                       # Automated execution and formatting harnesses
-│   ├── run_all_labs.sh            # Batch runner for LuccME simulation labs
+│   ├── run_all_labs.sh            # Batch and single-lab runner for LuccME simulation labs
 │   ├── run_all_fill.sh            # Batch runner for TerraME GIS fill scripts
 │   ├── export_reference.py        # Spatial parser converting SHP to standardized CSV
 │   └── package_release.sh         # Release archiver and hash generator
 │
-├── goldens/                       # Immutable reference outputs (CSVs)
+├── goldens/                       # Reference outputs
 │   ├── fill/                      # itaituba_terrame.csv, amazonia_terrame.csv, emas_terrame.csv
-│   └── labs/                      # cs_moju_baseline.csv, csAC_baseline.csv, etc.
+│   └── labs/                      # Canonical CSVs (tracked) and .zip shapefiles (local only)
 │
-└── release/                       # Pre-built release archive for GitHub Releases / Zenodo
+└── release/                       # Release archive bundle for GitHub Releases / Zenodo
     └── luccme-goldens-v1.0.0.zip
+
 ```
 
 ---
@@ -163,6 +192,10 @@ If you use these reference goldens in scientific research, please cite:
   year={2026},
   publisher={Taylor \& Francis}
 }
+
 ```
 
 Upstream TerraME and LuccME frameworks are Copyright (C) 2001–2017 INPE and TerraLAB/UFOP.
+
+```
+

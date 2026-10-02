@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this reference dataset or simulation harness, please cite it as below."
+type: dataset
+title: "luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1"
+abstract: "Canonical reference execution outputs (goldens), cryptographic hashes, and Dockerized execution harness for legacy TerraME 2.0.1 and LuccME 3.1 land-use change models."
+version: 1.0.0
+date-released: 2026-10-02
+license: MIT
+url: "https://github.com/LambdaGeo/luccme-goldens"
+repository-code: "https://github.com/LambdaGeo/luccme-goldens"
+keywords:
+  - "land-use change"
+  - "LuccME"
+  - "TerraME"
+  - "reproducibility"
+  - "spatial data cubes"
+  - "cellular automata"
+  - "golden data"
+  - "open science"
+authors:
+  - family-names: Costa
+    given-names: Sérgio Souza
+    affiliation: "Universidade Federal do Maranhão (UFMA)"
+    orcid: "https://orcid.org/0000-0002-0232-4549"

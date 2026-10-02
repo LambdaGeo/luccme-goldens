@@ -7,28 +7,228 @@
   "files": [
     {
       "path": "goldens/fill/amazonia_terrame.csv",
-      "sha256": "3ba11f3bb373597f0d7cf8ca8d73f34394191551248556e0f561ba7aaedcf7b3",
-      "size_bytes": 151846
+      "sha256": "2203306cfd68b6c43fc6d06dc0cfc6ee3e9445e6e8e00fc476b56b07255620fa",
+      "size_bytes": 165662
     },
     {
       "path": "goldens/fill/emas_terrame.csv",
-      "sha256": "d57a5743fcd975c84be8f02b9e49fd9f312c455aa47a33741dddf73254ea259d",
+      "sha256": "332a762b2d9444ffbdd22acdf6406feff22dbb005f129fa5de1efdda930e3939",
       "size_bytes": 242551
     },
     {
       "path": "goldens/fill/itaituba_terrame.csv",
-      "sha256": "ec9a15f38c78e577969cb250aa4704c48f82b3c09eb324d25b59d9d280152c74",
-      "size_bytes": 60654
+      "sha256": "36b7648881b231eeee9e86aede6d22791215786c8bf05a5b38fe19101989d6fb",
+      "size_bytes": 65185
     },
     {
-      "path": "goldens/labs/csAC_baseline.csv",
-      "sha256": "f9981ce5316a74d39309cadb30e9e1eb077ffb26febbf12a6a664073d373c9a6",
-      "size_bytes": 1015680
+      "path": "goldens/labs/Lab01_2014.csv",
+      "sha256": "1ec2eea978a672b9c3d7f3fab2159f81dea633892482fac5141370b493fed104",
+      "size_bytes": 940219
     },
     {
-      "path": "goldens/labs/cs_moju_baseline.csv",
-      "sha256": "18e66957b3ca5ffc3177fe686fa8183f8d065c5ffbc7ddddbdf44d7085ed0d33",
-      "size_bytes": 1241881
+      "path": "goldens/labs/Lab01_2014.zip",
+      "sha256": "0ac77ea0ca7a3c5ebfda2dd0e420076df6c60fdc303dc282b75e141a155c7815",
+      "size_bytes": 571254
+    },
+    {
+      "path": "goldens/labs/Lab02_2014.csv",
+      "sha256": "06498fba7c3561455693a0ff88fd2afc22d897fbada128e240dc66bab7c97cd7",
+      "size_bytes": 945607
+    },
+    {
+      "path": "goldens/labs/Lab02_2014.zip",
+      "sha256": "17fa9725d501a8333b8105a859bc21480f5da467633b638e96e14aab5d749896",
+      "size_bytes": 573486
+    },
+    {
+      "path": "goldens/labs/Lab03_2014.csv",
+      "sha256": "eaf5d01f06961270f53d28655455838d6a55e615d0295db8a9812eb4f28f21ad",
+      "size_bytes": 945617
+    },
+    {
+      "path": "goldens/labs/Lab03_2014.zip",
+      "sha256": "6db41fe67e8b0e0f22435ad7e4b7a12b3ee97ba2e0c2b2975c3f2c76e65bf54a",
+      "size_bytes": 573466
+    },
+    {
+      "path": "goldens/labs/Lab04_2014.csv",
+      "sha256": "d4011a3dd1f346bd7a228b8169fbbe0ecf76732cf35c8073171d4439b3c43133",
+      "size_bytes": 945670
+    },
+    {
+      "path": "goldens/labs/Lab04_2014.zip",
+      "sha256": "96eb07d9d3dd19ed318bb44380a90b5a13122bf44b6b2c5b8cce4dfc791bbf9e",
+      "size_bytes": 573494
+    },
+    {
+      "path": "goldens/labs/Lab05_2014.csv",
+      "sha256": "41dcdebcb8e1c27ac7c15404c44ea01477b8b509865b99536fcf611fe9c682be",
+      "size_bytes": 945647
+    },
+    {
+      "path": "goldens/labs/Lab05_2014.zip",
+      "sha256": "995fddc761eccf69083f3be15c6b04c84e37db2bf1350b486a94aecb62fab755",
+      "size_bytes": 573474
+    },
+    {
+      "path": "goldens/labs/Lab06_2014.csv",
+      "sha256": "aa5ee281b56864e826c2c0f320eeeac94ff1086fda03baecb37b5bac909ac0b2",
+      "size_bytes": 945645
+    },
+    {
+      "path": "goldens/labs/Lab06_2014.zip",
+      "sha256": "62c2a438d95744d1da7a4ac5c23efd80b353de046962c7beaa5f10e5f4e7ddb9",
+      "size_bytes": 573502
+    },
+    {
+      "path": "goldens/labs/Lab07_2025.csv",
+      "sha256": "544ff68338ff13510f0c902198ae48baedcbbc0d58d63d63a2e13da12d8f16af",
+      "size_bytes": 951784
+    },
+    {
+      "path": "goldens/labs/Lab07_2025.zip",
+      "sha256": "5d141d290d81ff2eebcce34ad3bcfa671a7267c71586e5cfe9b4ccba264ac98d",
+      "size_bytes": 581271
+    },
+    {
+      "path": "goldens/labs/Lab08_2014.csv",
+      "sha256": "c507ebb28e703a774ba1fe5b30d81ab20bebe0be901e08b4fa3706a325ed1a76",
+      "size_bytes": 941823
+    },
+    {
+      "path": "goldens/labs/Lab08_2014.zip",
+      "sha256": "de044a8deb3d5bc9105b0b278337a8e928e57bc6ea37be2da01481c960c86ca6",
+      "size_bytes": 570355
+    },
+    {
+      "path": "goldens/labs/Lab09_2014.csv",
+      "sha256": "81d6a7852a92d366f7d93326e22810bd5922ea816fa5a368d43d4443d3c5adc7",
+      "size_bytes": 919485
+    },
+    {
+      "path": "goldens/labs/Lab09_2014.zip",
+      "sha256": "7fdfd677754229b40a4de82ce0f5691c8e9886e1d587b0cc83afd163c70b437b",
+      "size_bytes": 554010
+    },
+    {
+      "path": "goldens/labs/Lab10_2004.csv",
+      "sha256": "d94e160c34a109026d32487f2d10ab3e354429eb7c157380333500e3cb5f18e0",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab10_2004.zip",
+      "sha256": "c91ba455125f3ab446d3aa2a7dde663a20cbe59e6648c027b31670e5a9bb3b17",
+      "size_bytes": 566485
+    },
+    {
+      "path": "goldens/labs/Lab11_2004.csv",
+      "sha256": "c7ec813a5a30fbf9ab392b15d49b4c86837ee13bb81fe713742fb682276f3372",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab11_2004.zip",
+      "sha256": "cb4ac2955e973f64365b3005202ea1fa32eee67bf2256f957c510e7ae060e711",
+      "size_bytes": 566560
+    },
+    {
+      "path": "goldens/labs/Lab12_2004.csv",
+      "sha256": "c84f41bda4245099d5ef543fad3225d285c0ed3c120a4a5f2234b97e4bbd581f",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab12_2004.zip",
+      "sha256": "27269fc6e03015eb606fb6cb515ec31431a0e065fcf5a5108fc6eaed242da8ab",
+      "size_bytes": 566571
+    },
+    {
+      "path": "goldens/labs/Lab13_2004.csv",
+      "sha256": "a9808c13502f11dd45355928d73fa90edf39e8ca3a85b02e10b7752ad66d4847",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab13_2004.zip",
+      "sha256": "d5e31587ac8fc809d764fbe9c792a906342ea18545bfcaecca5492f167b45e83",
+      "size_bytes": 566536
+    },
+    {
+      "path": "goldens/labs/Lab14_2004.csv",
+      "sha256": "017d0ff76678128b2e8545fd3b63df4eb2a84ec390c57700c0ba24ae3baa426e",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab14_2004.zip",
+      "sha256": "07ce707ee08861dbb0cf24c1acb06b59986fddaee1b93336c7c9f058806e675f",
+      "size_bytes": 566424
+    },
+    {
+      "path": "goldens/labs/Lab15_2004.csv",
+      "sha256": "a3a2f6828c372a16c6a238fb860aa01d7f2d5b0c6aebae1d7cf89d66bf331fed",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab15_2004.zip",
+      "sha256": "1871e05279ce29e2f31416503cb3f477d06ac5971a9ab87d3c6700b7b295aaa7",
+      "size_bytes": 566427
+    },
+    {
+      "path": "goldens/labs/Lab16_2004.csv",
+      "sha256": "a3a2f6828c372a16c6a238fb860aa01d7f2d5b0c6aebae1d7cf89d66bf331fed",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab16_2004.zip",
+      "sha256": "064e2aff82cc27820944b7a7e464a7ea521d965aa003331e10b5059e459fdfc6",
+      "size_bytes": 566427
+    },
+    {
+      "path": "goldens/labs/Lab17_2004.csv",
+      "sha256": "a3a2f6828c372a16c6a238fb860aa01d7f2d5b0c6aebae1d7cf89d66bf331fed",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab17_2004.zip",
+      "sha256": "49c0f8dc2151906c8221d3d781f124d67e9f24b6b7866bc663cecfa464e380fb",
+      "size_bytes": 566427
+    },
+    {
+      "path": "goldens/labs/Lab18_2004.csv",
+      "sha256": "d9b00e78e29f6be98620b317e55e1861b68b6895e9aa5bb68624c31960929376",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab18_2004.zip",
+      "sha256": "f26b034641831fdf9f2c61927c0302c26bd3807e0be6bf7c6be55e0370ba2f5d",
+      "size_bytes": 567375
+    },
+    {
+      "path": "goldens/labs/Lab19_2004.csv",
+      "sha256": "1b1ebe9042066ba14083b03887712619554232a4a420cb9aef4c325d76670a08",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab19_2004.zip",
+      "sha256": "679f9a476510422f1e9ccae0a9b454b9b270c04fedbd150ffb95ce82e4c9c00a",
+      "size_bytes": 566556
+    },
+    {
+      "path": "goldens/labs/Lab20_2004.csv",
+      "sha256": "a3a2f6828c372a16c6a238fb860aa01d7f2d5b0c6aebae1d7cf89d66bf331fed",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab20_2004.zip",
+      "sha256": "663f7fb9f5e39f287b9737a7739c469242cf96221a916011e407ecfc2b0b987e",
+      "size_bytes": 566427
+    },
+    {
+      "path": "goldens/labs/Lab21_2004.csv",
+      "sha256": "bf20dfb568468805564572c0ac652377c8cfe0893cfc186541421fc8389b4f17",
+      "size_bytes": 1001787
+    },
+    {
+      "path": "goldens/labs/Lab21_2004.zip",
+      "sha256": "6ac7036f1835d1d8f47abe63de257323300fe87654867c023ae0e7211cd1f022",
+      "size_bytes": 566161
     }
   ]
 }

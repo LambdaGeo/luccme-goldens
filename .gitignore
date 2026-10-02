@@ -1,6 +1,9 @@
-# Ignorar shapefiles e arquivos gerados localmente
+# Local Shapefiles and binary zip archives (kept local to avoid git bloat)
 goldens/**/*.zip
 goldens/**/*.shp
 goldens/**/*.dbf
 goldens/**/*.shx
+goldens/**/*.prj
+goldens/**/*.cpg
+goldens/**/*.qix
 release/*.zip
