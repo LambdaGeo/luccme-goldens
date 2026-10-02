@@ -4,6 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Docker Image](https://img.shields.io/badge/Docker-profsergiocosta%2Fterrame--luccme-blue)](https://hub.docker.com/r/profsergiocosta/terrame-luccme)
 [![Open Science](https://img.shields.io/badge/Open%20Science-Reproducible%20Goldens-green.svg)](#)
+[![DOI](https://zenodo.org/badge/1402144728.svg)](https://doi.org/10.5281/zenodo.23107747)
 
 **Canonical Reference Execution Outputs (Goldens) for TerraME 2.0.1 and LuccME 3.1.**
 
@@ -184,7 +185,21 @@ luccme-goldens/
 
 If you use these reference goldens in scientific research, please cite:
 
+**APA:**
+> Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23107748
 
+**BibTeX:**
+```bibtex
+@software{costa_2026_23107748,
+  author       = {Costa, S{\'e}rgio Souza},
+  title        = {luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1},
+  month        = oct,
+  year         = 2026,
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.23107748},
+  url          = {[https://doi.org/10.5281/zenodo.23107748](https://doi.org/10.5281/zenodo.23107748)}
+}
 
 Upstream TerraME and LuccME frameworks are Copyright (C) 2001–2017 INPE and TerraLAB/UFOP.
 
