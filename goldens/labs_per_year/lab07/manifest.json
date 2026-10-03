@@ -14,9 +14,9 @@
   },
   "generator": {
     "script": "scripts/lab_per_year.py",
-    "sha256": "636ac42c21bb751e3af3166a2538c7413303373b2e0637ed8782bb486f989357",
+    "sha256": "902800bfedc55438e626346a2acf36989e881875b2302178f9b80d150c0dae82",
     "recorder": "scripts/per_year_snapshot.lua",
-    "recorder_sha256": "23752d06b0baf2fd3dbfc72a8220c8f592a13044d2e4c42bb79779775f127306"
+    "recorder_sha256": "840f79381a89a44e66c7f294d1c39e0cc8ee75f0a3aa4ebacd4f9bec9a533e6d"
   },
   "status": "ok",
   "years": [
@@ -35,13 +35,13 @@
   "file": {
     "name": "lab07.csv.gz",
     "rows": 118332,
-    "sha256": "cce007f16c0a30b07929b303ec9e8a02ebfe2b05ee0759651a34c4b045d18988"
+    "sha256": "9a5bfc16149149b9dd08cafcafa8ffa6a7ddfd8c73e725f1fa07a9702b381c6a"
   },
   "crosscheck_vs_final_golden": {
     "tolerance": 1e-09,
     "file": "Lab07_2025.csv",
     "max_abs_diff": {
-      "d_out": 0.993082944046
+      "d_out": 5.000000413701855e-11
     },
     "note": "last year of the CSV compared with the canonical final-year golden"
   },
