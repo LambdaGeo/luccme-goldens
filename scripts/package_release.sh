@@ -6,7 +6,7 @@ set -euo pipefail
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 RELEASE_DIR="$ROOT_DIR/release"
-VERSION="v1.0.0"
+VERSION="${VERSION:-v1.1.0}"
 ZIP_NAME="luccme-goldens-${VERSION}.zip"
 CHECKSUMS_FILE="$ROOT_DIR/checksums.sha256"
 MANIFEST_FILE="$ROOT_DIR/manifest.json"
@@ -22,7 +22,7 @@ cd "$ROOT_DIR"
 # 1. Compute SHA-256 for all goldens
 echo "==> Computing SHA-256 checksums..."
 rm -f "$CHECKSUMS_FILE"
-find goldens/ -type f \( -name "*.csv" -o -name "*.shp" -o -name "*.dbf" -o -name "*.tif" \) | sort | while read -r f; do
+find goldens/ -type f \( -name "*.csv" -o -name "*.csv.gz" -o -name "*.shp" -o -name "*.dbf" -o -name "*.tif" \) | sort | while read -r f; do
     sha256sum "$f" >> "$CHECKSUMS_FILE"
 done
 cat "$CHECKSUMS_FILE"
@@ -34,7 +34,7 @@ import json, hashlib, os, glob, zipfile
 
 files_info = []
 for f in sorted(glob.glob('goldens/**/*.*', recursive=True)):
-    if os.path.isfile(f) and not f.endswith('.sha256') and not f.endswith('.json'):
+    if os.path.isfile(f) and not f.endswith('.sha256'):
         with open(f, 'rb') as fp:
             digest = hashlib.sha256(fp.read()).hexdigest()
         size = os.path.getsize(f)

@@ -37,18 +37,41 @@ Covers the official functional test suite of LuccME 3.1 across continuous and di
 | **Lab07** | Continuous | Prospective scenario simulation (2015–2025) with dynamic updates (2020) | Acre (`csAC_cenarioA_2020.shp`) |
 | **Lab08** | Continuous | `PotentialCSpatialLagLinearRegressionMix` | Acre (`csAC.shp`) |
 | **Lab09** | Continuous | `PotentialCMaximumEntropyLike` | Acre (`csAC.shp`) |
-| **Lab10** | Discrete | `PotentialDNeighSimpleRule` + `AllocationDSimpleOrdering` | Moju/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab11** | Discrete | `PotentialDInverseDistanceRule` + `AllocationDSimpleOrdering` | Moju/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab12** | Discrete | `PotentialDNeighInverseDistanceRule` + `AllocationDSimpleOrdering` | Moju/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab13** | Discrete | `PotentialDLogisticRegression` | Moju/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab14** | Discrete | `PotentialDLogisticRegressionNeighAttract` + `AllocationDClueSLike` | Moju/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab15** | Discrete | **`DemandPreComputed` + `PotentialDLogisticRegression` + `AllocationDClueSLike`** | **Moju/BR-163 (Paper Case 1)** |
-| **Lab16** | Discrete | `DemandComputeTwoDates` + `PotentialDLogisticRegression` + `AllocationDClueSLike` | Moju/BR-163 (`cs_moju.shp`) |
-| **Lab17** | Discrete | `DemandComputeThreeDates` + `PotentialDLogisticRegression` + `AllocationDClueSLike` | Moju/BR-163 (`cs_moju.shp`) |
-| **Lab18** | Discrete | `PotentialDSampleBased` + `AllocationDClueSLike` | Moju/BR-163 (`cs_moju.shp`) |
-| **Lab19** | Discrete | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationDClueSNeighOrdering` | Moju/BR-163 (`cs_moju.shp`) |
-| **Lab20** | Mixed | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationCClueLike` | Moju/BR-163 (`cs_moju.shp`) |
-| **Lab21** | Discrete | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationDClueSNeighOrdering` | Moju/BR-163 (`cs_moju.shp`) |
+| **Lab10** | Discrete | `PotentialDNeighSimpleRule` + `AllocationDSimpleOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
+| **Lab11** | Discrete | `PotentialDInverseDistanceRule` + `AllocationDSimpleOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
+| **Lab12** | Discrete | `PotentialDNeighInverseDistanceRule` + `AllocationDSimpleOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
+| **Lab13** | Discrete | `PotentialDLogisticRegression` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
+| **Lab14** | Discrete | `PotentialDLogisticRegressionNeighAttract` + `AllocationDClueSLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
+| **Lab15** | Discrete | **`DemandPreComputed` + `PotentialDLogisticRegression` + `AllocationDClueSLike`** | **Mojuí dos Campos/BR-163 (Paper Case 1)** |
+| **Lab16** | Discrete | `DemandComputeTwoDates` + `PotentialDLogisticRegression` + `AllocationDClueSLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
+| **Lab17** | Discrete | `DemandComputeThreeDates` + `PotentialDLogisticRegression` + `AllocationDClueSLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
+| **Lab18** | Discrete | `PotentialDSampleBased` + `AllocationDClueSLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
+| **Lab19** | Discrete | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationDClueSNeighOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
+| **Lab20** | Mixed | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationCClueLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
+| **Lab21** | Discrete | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationDClueSNeighOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
+
+### Suite A.2: Per-year goldens (`goldens/labs_per_year/`)
+
+The goldens of Suite A keep only the **last year** of each lab. Validating a re-implementation year by year (and the number of iterations TerraME needed in each year) needs the state of every cell at the end of every year. Each per-year golden is a folder:
+
+| File | Contents |
+| :--- | :--- |
+| `<name>.csv.gz` | `year,id,col,row`, then `<lu>_out` and `<lu>_pot` of every cell, every year, 12 decimal places |
+| `manifest.json` | source script and SHA-256, generator, years, cells, columns, iterations per year, and a cross-check of the last year against the canonical `goldens/labs/` file |
+| `terrame.log` | TerraME output (demand, allocated area, iterations per year) |
+
+Generate one with `make run-labs-per-year LAB=15` (Docker). The lab is **not changed**: a recorder Event (`scripts/per_year_snapshot.lua`) runs after the model step and reads the cells. Listing every year in `save.saveYears` would not work, because the allocation components use it to manage `<lu>_backupYear`/`_chpast` and to restore the cell values, so it changes the simulation.
+
+**Variants.** `make run-labs-per-year LAB=15 MD=10` runs the same lab with another `maxDifference` and writes `lab15_md10/`. Variants are **not labs of the LuccME package**: `manifest.json` records `variant_of` and the override, and there is no canonical final-year file for them (the cross-check is skipped). They exist to exercise the convergence loop, since in the package labs the allocation is accepted at the first pass.
+
+Compare two per-year goldens (e.g. a re-generated one against another implementation's reference):
+
+```bash
+make compare-per-year NEW=goldens/labs_per_year/lab15/lab15.csv.gz REF=other/lab15.csv.gz \
+     NEWM=goldens/labs_per_year/lab15/manifest.json REFM=other/manifest.json   # manifests optional
+```
+
+The files released with each version are listed in `manifest.json`.
 
 ### Suite B: TerraME GIS Fill Cellular Space (`sources/fill/` → `goldens/fill/`)
 Validates spatial aggregation and feature extraction on cellular grids against TerraME's `cl:fill{}`:
@@ -160,7 +183,7 @@ make package
 
 ```
 
-Generates `checksums.sha256`, `manifest.json`, and `release/luccme-goldens-v1.0.0.zip`.
+Generates `checksums.sha256`, `manifest.json`, and `release/luccme-goldens-<version>.zip` (`VERSION=v1.1.0 make package` to override the default). Checksums cover `.csv`, `.csv.gz`, `.shp`, `.dbf` and `.tif`.
 
 ---
 
@@ -182,15 +205,19 @@ luccme-goldens/
 ├── scripts/                       # Automated execution and formatting harnesses
 │   ├── run_all_labs.sh            # Batch and single-lab runner for LuccME simulation labs
 │   ├── run_all_fill.sh            # Batch runner for TerraME GIS fill scripts (with .zip packager)
+│   ├── run_per_year.sh            # Per-year golden of one lab or variant (Docker)
+│   ├── lab_per_year.py            # transform / consolidate / compare per-year goldens
+│   ├── per_year_snapshot.lua      # Recorder Event inlined into the lab by lab_per_year.py
 │   ├── export_reference.py        # Spatial parser converting SHP to standardized CSV
 │   └── package_release.sh         # Release archiver and hash generator
 │
 ├── goldens/                       # Reference outputs
 │   ├── fill/                      # Canonical CSVs and zipped shapefiles (itaituba, amazonia, emas, majority)
-│   └── labs/                      # Canonical CSVs and zipped shapefiles (csAC, cs_moju, lab01-21)
+│   ├── labs/                      # Canonical CSVs and zipped shapefiles (csAC, cs_moju, lab01-21)
+│   └── labs_per_year/             # Year-by-year states (csv.gz, manifest.json, log) and _mdN variants
 │
 └── release/                       # Release archive bundle for GitHub Releases / Zenodo
-    └── luccme-goldens-v1.0.0.zip
+    └── luccme-goldens-<version>.zip
 
 ```
 
