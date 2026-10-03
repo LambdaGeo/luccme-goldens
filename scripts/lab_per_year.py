@@ -205,10 +205,20 @@ def cmd_consolidate(a: argparse.Namespace) -> None:
         "iterations_per_year": parse_iterations(log_text, years),
         "iterations_note": ITERATIONS_NOTE,
     }
+    failed = bool(crosscheck) and any(
+        not (v <= crosscheck["tolerance"]) for v in crosscheck["max_abs_diff"].values()
+    )
+    if failed:
+        manifest["status"] = "crosscheck_failed"
     (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {csv_path} ({len(df):,} rows, years {years[0]}-{years[-1]})")
     if crosscheck:
         print("Cross-check vs final golden, max |diff|:", crosscheck["max_abs_diff"])
+    if failed:
+        raise SystemExit(
+            f"ERROR: the last year does not match {crosscheck['file']} "
+            f"(tolerance {crosscheck['tolerance']:g}); {csv_path.name} must not be released"
+        )
 
 
 # ---------------------------------------------------------------------------

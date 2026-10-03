@@ -11,6 +11,12 @@
 -- components use `belong(time, saveYears)` to manage `<lu>_backupYear`, `_chpast`
 -- and to restore `cell[<lu>]`, so changing it changes the simulation itself.
 --
+-- Cell ids are captured when the recorder is created, before any year runs.
+-- LuccMEModel:dinamicVars() (labs with `updateYears`) overwrites every cell
+-- attribute that also exists in the csAC_<year> layer, `id` included, pairing the
+-- two spaces by position; reading cell.id each year would relabel the cells from
+-- the first update year on (the values stay with the right cell, the ids do not).
+--
 -- Output: CSV `year,id,<lu>_out...,<lu>_pot...`, one row per cell per year,
 -- 12 decimal places; a missing attribute is written as `nan`.
 -- ==============================================================================
@@ -22,6 +28,11 @@ function perYearSnapshot(model, path)
 	for _, lu in ipairs(lus) do header[#header + 1] = lu .. "_out" end
 	for _, lu in ipairs(lus) do header[#header + 1] = lu .. "_pot" end
 	fh:write(table.concat(header, ",") .. "\n")
+
+	local ids = {}
+	forEachCell(model.cs, function(cell)
+		ids[cell] = tostring(cell.id or cell.object_id_ or cell.object_id0)
+	end)
 
 	local function fmt(v)
 		if type(v) ~= "number" then return "nan" end
@@ -35,7 +46,9 @@ function perYearSnapshot(model, path)
 			action = function(event)
 				local year = string.format("%d", event:getTime())
 				forEachCell(model.cs, function(cell)
-					local row = {year, tostring(cell.id or cell.object_id_ or cell.object_id0)}
+					local id = ids[cell]
+					if id == nil then error("cell not present when the recorder was created") end
+					local row = {year, id}
 					for _, lu in ipairs(lus) do row[#row + 1] = fmt(cell[lu .. "_out"]) end
 					for _, lu in ipairs(lus) do row[#row + 1] = fmt(cell[lu .. "_pot"]) end
 					fh:write(table.concat(row, ",") .. "\n")
