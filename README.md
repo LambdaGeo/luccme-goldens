@@ -58,6 +58,7 @@ Validates spatial aggregation and feature extraction on cellular grids against T
 | **`itaituba`** | 620 cells, 5 km | SIRGAS 2000 UTM 21S (EPSG:29191) | `average` (elevation), `coverage` (deforestation), `distance` (roads, localities), `sum` (population) |
 | **`amazonia`** | 2,229 cells, 50 km | SIRGAS 2000 UTM 21S (EPSG:29191) | `coverage` (PRODES), `distance` (roads, ports), `area` (protected reserves) |
 | **`emas`** | 5,514 cells, 500 m | SAD69 UTM 22S (EPSG:29192) | `presence` (firebreak, rivers), `maximum` & `minimum` (vegetation cover) |
+| **`majority`** | 620 cells, 5 km | SIRGAS 2000 UTM 21S (EPSG:29191) | `mode` (predominant deforestation class; text column, ties listed separated by comma) |
 
 ---
 
@@ -129,13 +130,14 @@ Each run automatically generates:
 
 ### 3. Run TerraME GIS Fill Cases
 
-To run a single fill case (e.g. Itaituba, Amazônia, or Emas):
+To run a single fill case (e.g. Itaituba, Amazônia, Emas, or Majority):
 
 ```bash
 make run-fill FILL=itaituba
 # Or:
 make run-fill FILL=amazonia
 make run-fill FILL=emas
+make run-fill FILL=majority
 
 ```
 
@@ -175,7 +177,7 @@ luccme-goldens/
 │
 ├── sources/                       # Canonical upstream model scripts and input layers
 │   ├── labs/                      # lab01.lua to lab21.lua (LuccME 3.1 upstream models)
-│   └── fill/                      # itaituba.lua, amazonia.lua, emas.lua
+│   └── fill/                      # itaituba.lua, amazonia.lua, emas.lua, majority.lua
 │
 ├── scripts/                       # Automated execution and formatting harnesses
 │   ├── run_all_labs.sh            # Batch and single-lab runner for LuccME simulation labs
@@ -184,7 +186,7 @@ luccme-goldens/
 │   └── package_release.sh         # Release archiver and hash generator
 │
 ├── goldens/                       # Reference outputs
-│   ├── fill/                      # Canonical CSVs and zipped shapefiles (itaituba, amazonia, emas)
+│   ├── fill/                      # Canonical CSVs and zipped shapefiles (itaituba, amazonia, emas, majority)
 │   └── labs/                      # Canonical CSVs and zipped shapefiles (csAC, cs_moju, lab01-21)
 │
 └── release/                       # Release archive bundle for GitHub Releases / Zenodo

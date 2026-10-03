@@ -10,11 +10,13 @@
 #   ./scripts/run_all_fill.sh itaituba
 #   ./scripts/run_all_fill.sh amazonia
 #   ./scripts/run_all_fill.sh emas
+#   ./scripts/run_all_fill.sh majority
 #
 # Datasets:
 #   - itaituba.lua (Itaituba/PA, 5 km, EPSG:29191)
 #   - amazonia.lua (Amazonia Legal, 50 km, EPSG:29191)
 #   - emas.lua (Parque Nacional das Emas, 500 m, EPSG:29192)
+#   - majority.lua (Itaituba/PA, 5 km, EPSG:29191; "mode" operation on the deforestation raster)
 # ==============================================================================
 set -euo pipefail
 
@@ -30,7 +32,7 @@ echo " Target: $TARGET_ARG | Output directory: $OUT_DIR"
 echo "========================================================================"
 
 if [ "$TARGET_ARG" = "all" ]; then
-    DATASETS=("itaituba" "amazonia" "emas")
+    DATASETS=("itaituba" "amazonia" "emas" "majority")
 else
     CLEAN_NAME=$(echo "$TARGET_ARG" | tr '[:upper:]' '[:lower:]' | sed 's/\.lua$//')
     DATASETS=("$CLEAN_NAME")
