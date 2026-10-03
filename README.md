@@ -50,15 +50,19 @@ Covers the official functional test suite of LuccME 3.1 across continuous and di
 | **Lab20** | Mixed | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationCClueLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
 | **Lab21** | Discrete | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationDClueSNeighOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
 
+**What `goldens/labs/` holds.** The **last year** of each lab, as saved by LuccME itself: the attributes of the cell layer (the model inputs, such as distances, slope and the initial land-use classes, plus the cell `id`, `row` and `col`) and the output column(s) the lab asks LuccME to save (`saveAttrs`, usually `d_out`). They are the checkpoint of the last year. They are also an input of the per-year generator, which takes the cell ids and `col`/`row` from this file and checks its own last year against it (see Suite A.2). Release `v1.0.0` (Zenodo) published these files.
+
 ### Suite A.2: Per-year goldens (`goldens/labs_per_year/`)
 
-The goldens of Suite A keep only the **last year** of each lab. Validating a re-implementation year by year (and the number of iterations TerraME needed in each year) needs the state of every cell at the end of every year. Each per-year golden is a folder:
+**These are the reference for validating a re-implementation year by year.** The goldens of Suite A keep only the last year of each lab, but validating a model needs the state of every cell at the end of every year and the number of iterations TerraME needed in each year. There is one folder per lab (`lab01` to `lab21`) and per variant:
 
 | File | Contents |
 | :--- | :--- |
 | `<name>.csv.gz` | `year,id,col,row`, then `<lu>_out` and `<lu>_pot` of every cell, every year, 12 decimal places |
 | `manifest.json` | source script and SHA-256, generator, years, cells, columns, iterations per year, and a cross-check of the last year against the canonical `goldens/labs/` file |
 | `terrame.log` | TerraME output (demand, allocated area, iterations per year) |
+
+A per-year golden gets `status: ok` only if its last year equals the corresponding `goldens/labs/` file within 1e-9; otherwise the generation exits with an error and the manifest says `status: crosscheck_failed`.
 
 Generate one with `make run-labs-per-year LAB=15` (Docker). The lab is **not changed**: a recorder Event (`scripts/per_year_snapshot.lua`) runs after the model step and reads the cells. Listing every year in `save.saveYears` would not work, because the allocation components use it to manage `<lu>_backupYear`/`_chpast` and to restore the cell values, so it changes the simulation.
 
@@ -150,6 +154,14 @@ Each run automatically generates:
 
 * **Canonical CSV (`.csv`)**: Used for numerical parity diffs and tracked in Git.
 * **Zipped Shapefile (`.zip`)**: Ready to open in QGIS/ArcGIS (kept locally; ignored by Git to avoid repository bloat).
+
+To generate the per-year goldens (Suite A.2), which need the matching `goldens/labs/Lab<NN>_<year>.csv` (a lab without it is skipped; run `make run-labs` first):
+
+```bash
+make run-labs-per-year LAB=15         # one lab -> goldens/labs_per_year/lab15/
+make run-labs-per-year                # all 21 labs
+make run-labs-per-year LAB=15 MD=10   # variant with another maxDifference -> lab15_md10/
+```
 
 ### 3. Run TerraME GIS Fill Cases
 
