@@ -1,0 +1,215 @@
+
+Verifying Model parameters
+Verifying Demand parameters
+Verifying Potential parameters
+Verifying Allocation parameters
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2008	Step: 0
+f Area: 137878	Difference: 0
+d Area: 19982	Difference: 0
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2008.	Number of iterations: 0	Maximum error: 2.7950358344242e-05
+
+Updating dynamic variables...
+layer_2009
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2009	Step: 0
+f Area: 137391	Difference: -231
+d Area: 20334	Difference: 96
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2009.	Number of iterations: 0	Maximum error: 230.55545507005
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2010	Step: 0
+f Area: 137052	Difference: -314
+d Area: 20673	Difference: 179
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2010.	Number of iterations: 0	Maximum error: 313.39186528631
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2011	Step: 0
+f Area: 136726	Difference: -385
+d Area: 21000	Difference: 250
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2011.	Number of iterations: 0	Maximum error: 384.04387689804
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2012	Step: 0
+f Area: 136410	Difference: -414
+d Area: 21316	Difference: 280
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2012.	Number of iterations: 0	Maximum error: 413.72090819161
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2013	Step: 0
+f Area: 136105	Difference: -434
+d Area: 21622	Difference: 300
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2013.	Number of iterations: 0	Maximum error: 433.07245550709
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2014	Step: 0
+f Area: 135810	Difference: -443
+d Area: 21918	Difference: 310
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2014.	Number of iterations: 0	Maximum error: 442.92812800774
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2015	Step: 0
+f Area: 135523	Difference: -450
+d Area: 22205	Difference: 317
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2015.	Number of iterations: 0	Maximum error: 449.5618650101
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2016	Step: 0
+f Area: 135245	Difference: -448
+d Area: 22484	Difference: 316
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2016.	Number of iterations: 0	Maximum error: 447.92470045428
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2017	Step: 0
+f Area: 134974	Difference: -439
+d Area: 22755	Difference: 307
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2017.	Number of iterations: 0	Maximum error: 438.58463443717
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2018	Step: 0
+f Area: 134711	Difference: -423
+d Area: 23019	Difference: 291
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2018.	Number of iterations: 0	Maximum error: 422.02936061966
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2019	Step: 0
+f Area: 134454	Difference: -399
+d Area: 23276	Difference: 268
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2019.	Number of iterations: 0	Maximum error: 398.71746887986
+
+Updating dynamic variables...
+layer_cenarioA_2020
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2020	Step: 0
+f Area: 134123	Difference: -450
+d Area: 23561	Difference: 274
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2020.	Number of iterations: 0	Maximum error: 449.71403493072
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2021	Step: 0
+f Area: 133844	Difference: -449
+d Area: 23840	Difference: 273
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2021.	Number of iterations: 0	Maximum error: 448.53640505538
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2022	Step: 0
+f Area: 133572	Difference: -422
+d Area: 24113	Difference: 246
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2022.	Number of iterations: 0	Maximum error: 421.38601932678
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2023	Step: 0
+f Area: 133304	Difference: -389
+d Area: 24381	Difference: 213
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2023.	Number of iterations: 0	Maximum error: 388.60692889144
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2024	Step: 0
+f Area: 133042	Difference: -351
+d Area: 24643	Difference: 175
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2024.	Number of iterations: 0	Maximum error: 350.48641325245
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2025	Step: 0
+f Area: 132786	Difference: -308
+d Area: 24900	Difference: 133
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2025.	Number of iterations: 0	Maximum error: 307.37067930007
+
+Saving Lab07_2025.
+Elapsed time: 00:00:08 hh:mm:ss
+
+End of Simulation
+Snapshot: lab07.png

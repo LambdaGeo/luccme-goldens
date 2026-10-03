@@ -16,6 +16,7 @@ help:
 	@echo "  make docker-pull         Pull official Docker image from Docker Hub"
 	@echo "  make run-labs            Execute all 21 LuccME labs in Docker"
 	@echo "  make run-labs LAB=15     Execute a specific lab (e.g. lab15, lab01, 15)"
+	@echo "  make run-labs-per-year   Execute per-year goldens for all labs"
 	@echo "  make run-labs-per-year LAB=15 [MD=10]  Per-year golden of one lab (MD = maxDifference variant)"
 	@echo "  make compare-per-year NEW=... REF=...  Compare two per-year goldens (.csv.gz)"
 	@echo "  make run-fill            Execute all 4 TerraME GIS fill cases in Docker"

@@ -1,0 +1,886 @@
+
+Verifying Model parameters
+Verifying Demand parameters
+Verifying Potential parameters
+Verifying Allocation parameters
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 5130
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.057022576854951
+
+rodovias
+min: 2.620906
+max: 200542.9
+avg: 67216.375033304
+
+dist_riobr
+min: 24607.02
+max: 733889.9
+avg: 350880.96876827
+
+rios_todos
+min: 1.013261
+max: 34626.96
+avg: 9476.998703403
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.24424958651947
+
+ti
+min: 0.0
+max: 1.0
+avg: 0.17500070045315
+
+ap
+min: 0.0
+max: 2.0
+avg: 0.5125245057338
+
+uc_pi
+min: 0.0
+max: 1.0
+avg: 0.093274218761175
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.053602286552329
+
+
+
+f	pot > 0 	pot = 0
+f_pot	6480	94
+
+
+d
+Cell number: 284
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.36306033151895
+
+rodovias
+min: 105.9865
+max: 54104.98
+avg: 18233.942061404
+
+dist_riobr
+min: 2467.404
+max: 622642.0
+avg: 107568.28484211
+
+rios_todos
+min: 16.89701
+max: 25583.5
+avg: 8402.9899909474
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.024451619502211
+
+ti
+min: 0.0
+max: 0.1232027
+avg: 0.00095316580701754
+
+ap
+min: 0.0
+max: 1.0
+avg: 0.025404785309228
+
+uc_pi
+min: 0.0
+max: 0.0
+avg: 0.0
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.23391812666667
+
+
+
+d	pot > 0 	pot = 0
+d_pot	2893	3681
+
+
+outros
+Cell number: 131
+
+
+outros	pot > 0 	pot = 0
+outros_pot	0	6574
+Executing Allocation component
+
+Year: 2008	Step: 0
+f Area: 137878	Difference: 0
+d Area: 19982	Difference: 0
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2008.	Number of iterations: 0	Maximum error: 2.7950358344242e-05
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 5130
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.057022576854951
+
+rodovias
+min: 2.620906
+max: 200542.9
+avg: 67216.375033304
+
+dist_riobr
+min: 24607.02
+max: 733889.9
+avg: 350880.96876827
+
+rios_todos
+min: 1.013261
+max: 34626.96
+avg: 9476.998703403
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.24424958651947
+
+ti
+min: 0.0
+max: 1.0
+avg: 0.17500070045315
+
+ap
+min: 0.0
+max: 2.0
+avg: 0.5125245057338
+
+uc_pi
+min: 0.0
+max: 1.0
+avg: 0.093274218761175
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.053602286552329
+
+
+
+f	pot > 0 	pot = 0
+f_pot	6480	94
+
+
+d
+Cell number: 284
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.36306033151895
+
+rodovias
+min: 105.9865
+max: 54104.98
+avg: 18233.942061404
+
+dist_riobr
+min: 2467.404
+max: 622642.0
+avg: 107568.28484211
+
+rios_todos
+min: 16.89701
+max: 25583.5
+avg: 8402.9899909474
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.024451619502211
+
+ti
+min: 0.0
+max: 0.1232027
+avg: 0.00095316580701754
+
+ap
+min: 0.0
+max: 1.0
+avg: 0.025404785309228
+
+uc_pi
+min: 0.0
+max: 0.0
+avg: 0.0
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.23391812666667
+
+
+
+d	pot > 0 	pot = 0
+d_pot	2893	3681
+
+
+outros
+Cell number: 131
+
+
+outros	pot > 0 	pot = 0
+outros_pot	0	6574
+Executing Allocation component
+
+Year: 2009	Step: 0
+f Area: 138654	Difference: 1032
+d Area: 20555	Difference: 316
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2009.	Number of iterations: 0	Maximum error: 1032.6086079162
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 5116
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.05671980561711
+
+rodovias
+min: 2.620906
+max: 200542.9
+avg: 67321.135638242
+
+dist_riobr
+min: 24607.02
+max: 733889.9
+avg: 351267.27091265
+
+rios_todos
+min: 1.013261
+max: 34626.96
+avg: 9489.8743221147
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.24472232615427
+
+ti
+min: 0.0
+max: 1.0
+avg: 0.17547949853921
+
+ap
+min: 0.0
+max: 2.0
+avg: 0.51373123967561
+
+uc_pi
+min: 0.0
+max: 1.0
+avg: 0.093529414982136
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.052771806195036
+
+
+
+f	pot > 0 	pot = 0
+f_pot	6480	94
+
+
+d
+Cell number: 295
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.36983849487466
+
+rodovias
+min: 105.9865
+max: 54104.98
+avg: 18201.149937162
+
+dist_riobr
+min: 2467.404
+max: 622642.0
+avg: 105872.16972973
+
+rios_todos
+min: 16.89701
+max: 25583.5
+avg: 8380.294674054
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.023542944453142
+
+ti
+min: 0.0
+max: 0.1232027
+avg: 0.00091774410472973
+
+ap
+min: 0.0
+max: 1.0
+avg: 0.024460688557872
+
+uc_pi
+min: 0.0
+max: 0.0
+avg: 0.0
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.23648648445946
+
+
+
+d	pot > 0 	pot = 0
+d_pot	2893	3681
+
+
+outros
+Cell number: 131
+
+
+outros	pot > 0 	pot = 0
+outros_pot	0	6574
+Executing Allocation component
+
+Year: 2010	Step: 0
+f Area: 138162	Difference: 795
+d Area: 21127	Difference: 632
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2010.	Number of iterations: 0	Maximum error: 795.77913538061
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 5101
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.055918014870591
+
+rodovias
+min: 2.620906
+max: 200542.9
+avg: 67425.964155995
+
+dist_riobr
+min: 24607.02
+max: 733889.9
+avg: 351233.40813015
+
+rios_todos
+min: 1.013261
+max: 34626.96
+avg: 9488.7754926815
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.24524581398107
+
+ti
+min: 0.0
+max: 1.0
+avg: 0.17599541239223
+
+ap
+min: 0.0
+max: 2.0
+avg: 0.5150456200353
+
+uc_pi
+min: 0.0
+max: 1.0
+avg: 0.093804393662013
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.052142950274402
+
+
+
+f	pot > 0 	pot = 0
+f_pot	6480	94
+
+
+d
+Cell number: 309
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.37264763275129
+
+rodovias
+min: 105.9865
+max: 54104.98
+avg: 18325.956743226
+
+dist_riobr
+min: 2467.404
+max: 622642.0
+avg: 105878.40929032
+
+rios_todos
+min: 16.89701
+max: 25583.5
+avg: 8504.9882565161
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.022896359219774
+
+ti
+min: 0.0
+max: 0.1232027
+avg: 0.00087629759677419
+
+ap
+min: 0.0
+max: 1.0
+avg: 0.023772656816548
+
+uc_pi
+min: 0.0
+max: 0.0
+avg: 0.0
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.24946236354839
+
+
+
+d	pot > 0 	pot = 0
+d_pot	2893	3681
+
+
+outros
+Cell number: 131
+
+
+outros	pot > 0 	pot = 0
+outros_pot	0	6574
+Executing Allocation component
+
+Year: 2011	Step: 0
+f Area: 137591	Difference: 481
+d Area: 21694	Difference: 943
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2011.	Number of iterations: 0	Maximum error: 943.78618867899
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 5081
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.054680785005855
+
+rodovias
+min: 2.620906
+max: 200542.9
+avg: 67584.998652083
+
+dist_riobr
+min: 24607.02
+max: 733889.9
+avg: 351351.35983865
+
+rios_todos
+min: 1.013261
+max: 34626.96
+avg: 9489.197582755
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.2459436654135
+
+ti
+min: 0.0
+max: 1.0
+avg: 0.17668803503053
+
+ap
+min: 0.0
+max: 2.0
+avg: 0.51680525740262
+
+uc_pi
+min: 0.0
+max: 1.0
+avg: 0.094173556958597
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.05165945145612
+
+
+
+f	pot > 0 	pot = 0
+f_pot	6480	94
+
+
+d
+Cell number: 320
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.37372818564766
+
+rodovias
+min: 105.9865
+max: 54104.98
+avg: 18394.866100935
+
+dist_riobr
+min: 2467.404
+max: 622642.0
+avg: 111657.57579439
+
+rios_todos
+min: 16.89701
+max: 25583.5
+avg: 8556.6229642368
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.023953847844642
+
+ti
+min: 0.0
+max: 0.1232027
+avg: 0.00084626870716511
+
+ap
+min: 0.0
+max: 1.0
+avg: 0.024800116551807
+
+uc_pi
+min: 0.0
+max: 0.0
+avg: 0.0
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.2445482847352
+
+
+
+d	pot > 0 	pot = 0
+d_pot	2893	3681
+
+
+outros
+Cell number: 131
+
+
+outros	pot > 0 	pot = 0
+outros_pot	0	6574
+Executing Allocation component
+
+Year: 2012	Step: 0
+f Area: 137025	Difference: 200
+d Area: 22253	Difference: 1217
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2012.	Number of iterations: 0	Maximum error: 1217.8416978275
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 5067
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.053700085142019
+
+rodovias
+min: 2.620906
+max: 200542.9
+avg: 67713.554252937
+
+dist_riobr
+min: 24607.02
+max: 733889.9
+avg: 351578.30384965
+
+rios_todos
+min: 1.013261
+max: 34626.96
+avg: 9497.9101584374
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.24641059590201
+
+ti
+min: 0.0
+max: 1.0
+avg: 0.17717612352509
+
+ap
+min: 0.0
+max: 2.0
+avg: 0.51802042433309
+
+uc_pi
+min: 0.0
+max: 1.0
+avg: 0.094433704905996
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.051210207636148
+
+
+
+f	pot > 0 	pot = 0
+f_pot	6480	94
+
+
+d
+Cell number: 335
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.37785072051458
+
+rodovias
+min: 105.9865
+max: 54104.98
+avg: 18424.688753274
+
+dist_riobr
+min: 2467.404
+max: 622642.0
+avg: 113471.78559524
+
+rios_todos
+min: 16.89701
+max: 25583.5
+avg: 8453.8149369643
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.022884479637292
+
+ti
+min: 0.0
+max: 0.1232027
+avg: 0.00090172799107143
+
+ap
+min: 0.0
+max: 1.0
+avg: 0.023786207628363
+
+uc_pi
+min: 0.0
+max: 0.0
+avg: 0.0
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.25099206160714
+
+
+
+d	pot > 0 	pot = 0
+d_pot	2893	3681
+
+
+outros
+Cell number: 131
+
+
+outros	pot > 0 	pot = 0
+outros_pot	0	6574
+Executing Allocation component
+
+Year: 2013	Step: 0
+f Area: 136466	Difference: -73
+d Area: 22808	Difference: 1486
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2013.	Number of iterations: 0	Maximum error: 1486.9490522524
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 5049
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.05290933718807
+
+rodovias
+min: 2.620906
+max: 200542.9
+avg: 67861.230508056
+
+dist_riobr
+min: 24607.02
+max: 733889.9
+avg: 351970.21554456
+
+rios_todos
+min: 1.013261
+max: 34626.96
+avg: 9503.2750825665
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.24687735434285
+
+ti
+min: 0.0
+max: 1.0
+avg: 0.17780764238121
+
+ap
+min: 0.0
+max: 2.0
+avg: 0.51945529701388
+
+uc_pi
+min: 0.0
+max: 1.0
+avg: 0.094770300289819
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.050633663168317
+
+
+
+f	pot > 0 	pot = 0
+f_pot	6480	94
+
+
+d
+Cell number: 346
+assentamen
+min: 0.0
+max: 1.0
+avg: 0.38590422641182
+
+rodovias
+min: 105.9865
+max: 54104.98
+avg: 18390.338951009
+
+dist_riobr
+min: 2467.404
+max: 622642.0
+avg: 114112.1307781
+
+rios_todos
+min: 16.89701
+max: 25583.5
+avg: 8497.5040196542
+
+uc_us
+min: 0.0
+max: 1.0
+avg: 0.022192393193458
+
+ti
+min: 0.0
+max: 0.1232027
+avg: 0.00087314295389049
+
+ap
+min: 0.0
+max: 1.0
+avg: 0.023065536147349
+
+uc_pi
+min: 0.0
+max: 0.0
+avg: 0.0
+
+fertilidad
+min: 0.0
+max: 1.0
+avg: 0.2473583074928
+
+
+
+d	pot > 0 	pot = 0
+d_pot	2893	3681
+
+
+outros
+Cell number: 131
+
+
+outros	pot > 0 	pot = 0
+outros_pot	0	6574
+Executing Allocation component
+
+Year: 2014	Step: 0
+f Area: 135912	Difference: -342
+d Area: 23361	Difference: 1753
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2014.	Number of iterations: 0	Maximum error: 1753.7447596856
+
+Saving Lab09_2014.
+Elapsed time: 00:00:03 hh:mm:ss
+
+End of Simulation
+Snapshot: lab09.png

@@ -1,90 +1,166 @@
 #!/usr/bin/env bash
 # ==============================================================================
-# run_per_year.sh — Per-year goldens for a LuccME lab (TerraME in Docker)
-#
-# Runs the lab with a recorder that writes <lu>_out / <lu>_pot of every cell at
-# the end of every year (see scripts/per_year_snapshot.lua), and consolidates
-# the result into goldens/labs_per_year/<name>/ (csv.gz + manifest.json + log).
-# The lab's own parameters are not changed, except for --max-difference.
+# run_per_year.sh — Execute LuccME Per-Year Goldens in Docker
 #
 # Examples:
-#   ./scripts/run_per_year.sh 15                       # lab15, maxDifference 300 (original)
-#   ./scripts/run_per_year.sh lab15 --max-difference 10  # variant -> lab15_md10
-#   ./scripts/run_per_year.sh 01 --max-difference 1643   # variant -> lab01_md1643
-#
-# Needs goldens/labs/LabNN_<last year>.csv (cell ids, col, row and the
-# cross-check). Variants (--max-difference) are NOT labs of the LuccME package.
+#   ./scripts/run_per_year.sh 15                           # Apenas lab15
+#   ./scripts/run_per_year.sh lab15 --max-difference 10   # lab15 variante md10
+#   ./scripts/run_per_year.sh all                          # Roda todos os labs
+#   ./scripts/run_per_year.sh                              # Roda todos os labs
 # ==============================================================================
 set -euo pipefail
 
-ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+TARGET_INPUT="${1:-all}"
+shift || true
+
+MAX_DIFFERENCE=""
 IMAGE="profsergiocosta/terrame-luccme"
-OUT_ROOT="$ROOT_DIR/goldens/labs_per_year"
-LAB="" MD=""
 
-usage() { sed -n '2,17p' "$0" | sed 's/^# \{0,1\}//'; exit "${1:-1}"; }
-
-while [ $# -gt 0 ]; do
+# Processa parâmetros opcionais (--max-difference e --image)
+while [[ $# -gt 0 ]]; do
     case "$1" in
-        --max-difference) MD="${2:?--max-difference needs a value}"; shift 2 ;;
-        --image)          IMAGE="${2:?--image needs a value}"; shift 2 ;;
-        --out)            OUT_ROOT="${2:?--out needs a value}"; shift 2 ;;
-        -h|--help)        usage 0 ;;
-        -*)               echo "Unknown option: $1" >&2; usage ;;
-        *)                [ -z "$LAB" ] && LAB="$1" || { echo "Only one lab per run" >&2; usage; }; shift ;;
+        --max-difference)
+            MAX_DIFFERENCE="$2"
+            shift 2
+            ;;
+        --image)
+            IMAGE="$2"
+            shift 2
+            ;;
+        *)
+            echo "Aviso: argumento desconhecido ignorado: $1"
+            shift
+            ;;
     esac
 done
-[ -n "$LAB" ] || usage
 
-LAB="${LAB%.lua}"
-[[ "$LAB" =~ ^[0-9]+$ ]] && LAB="$(printf 'lab%02d' "$((10#$LAB))")"
-[[ "$LAB" =~ ^lab[0-9]{2}$ ]] || { echo "Invalid lab: $LAB (expected 01..21)" >&2; exit 1; }
-NUM="${LAB#lab}"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+BASE_OUT_DIR="$ROOT_DIR/goldens/labs_per_year"
+mkdir -p "$BASE_OUT_DIR"
 
-SRC="$ROOT_DIR/sources/labs/$LAB.lua"
-[ -f "$SRC" ] || { echo "Lab not found: $SRC" >&2; exit 1; }
-
-shopt -s nullglob
-FINALS=("$ROOT_DIR"/goldens/labs/Lab${NUM}_*.csv)
-[ ${#FINALS[@]} -eq 1 ] || { echo "Expected exactly one goldens/labs/Lab${NUM}_<year>.csv, found ${#FINALS[@]}" >&2; exit 1; }
-
-NAME="$LAB"
-MD_ARGS=()
-if [ -n "$MD" ]; then
-    NAME="${LAB}_md${MD}"
-    MD_ARGS=(--max-difference "$MD")
+# Seleciona os arquivos a processar
+if [ -z "$TARGET_INPUT" ] || [ "$TARGET_INPUT" = "all" ]; then
+    LAB_FILES=("$ROOT_DIR"/sources/labs/lab*.lua)
+else
+    CLEAN_NAME="${TARGET_INPUT%.lua}"
+    if [[ "$CLEAN_NAME" =~ ^[0-9]+$ ]]; then
+        CLEAN_NAME=$(printf "lab%02d" "$CLEAN_NAME")
+    fi
+    TARGET_FILE="$ROOT_DIR/sources/labs/${CLEAN_NAME}.lua"
+    if [ ! -f "$TARGET_FILE" ]; then
+        echo "Erro: Lab nao encontrado: $TARGET_FILE"
+        echo "Labs disponiveis: lab01 a lab21"
+        exit 1
+    fi
+    LAB_FILES=("$TARGET_FILE")
 fi
-OUT_DIR="$OUT_ROOT/$NAME"
-
-WORK_DIR="$(mktemp -d)"
-trap 'rm -rf "$WORK_DIR"' EXIT
 
 echo "========================================================================"
-echo " Per-year golden: $NAME  (image: $IMAGE)"
-echo " Output: $OUT_DIR"
+echo " Running LuccME 3.1 Per-Year Goldens in Docker ($IMAGE)"
+echo " Selected: ${TARGET_INPUT}"
+echo " Output base directory: $BASE_OUT_DIR"
+if [ -n "$MAX_DIFFERENCE" ]; then
+    echo " Max Difference override: $MAX_DIFFERENCE"
+fi
 echo "========================================================================"
 
-python3 "$ROOT_DIR/scripts/lab_per_year.py" transform "$SRC" \
-    --out "$WORK_DIR/target_lab.lua" --snapshot /work/snapshot.csv "${MD_ARGS[@]}"
+FAILED_LABS=()
+SUCCESS_LABS=()
 
-if ! docker run --rm \
+for lab_file in "${LAB_FILES[@]}"; do
+    lab_name="$(basename "$lab_file" .lua)"
+    
+    # Define o nome de saída (com sufixo se houver variante MD)
+    if [ -n "$MAX_DIFFERENCE" ]; then
+        run_name="${lab_name}_md${MAX_DIFFERENCE}"
+    else
+        run_name="${lab_name}"
+    fi
+
+    # Localiza o golden de referência de células canônicas
+    # Suporta formatos como Lab15_2020.csv, Lab15.csv, lab15_2020.csv, etc.
+    lab_num_pattern="${lab_name#lab}"
+    cells_file=$(find "$ROOT_DIR/goldens/labs" -maxdepth 1 -type f \( -iname "${lab_name}_*.csv" -o -iname "${lab_name}.csv" \) | head -n 1)
+
+    if [ -z "$cells_file" ] || [ ! -f "$cells_file" ]; then
+        echo "==> Skipping $run_name: golden de celulas de referencia nao encontrado em goldens/labs/"
+        continue
+    fi
+
+    echo -n "==> Running per-year for $run_name... "
+
+    WORK_DIR="$(mktemp -d)"
+    SNAPSHOT_FILE="/work/snapshot_per_year.csv"
+
+    # Prepara argumentos para o transform
+    TRANSFORM_ARGS=("$lab_file" --out "$WORK_DIR/target_lab.lua" --snapshot "$SNAPSHOT_FILE")
+    if [ -n "$MAX_DIFFERENCE" ]; then
+        TRANSFORM_ARGS+=(--max-difference "$MAX_DIFFERENCE")
+    fi
+
+    # 1. Transforma o lab injetando o gravador per-year
+    if ! python3 "$ROOT_DIR/scripts/lab_per_year.py" transform "${TRANSFORM_ARGS[@]}" > "$WORK_DIR/transform.log" 2>&1; then
+        echo "FAILED on transform (veja log abaixo)"
+        cat "$WORK_DIR/transform.log"
+        FAILED_LABS+=("$run_name")
+        rm -rf "$WORK_DIR"
+        continue
+    fi
+
+    # 2. Executa no Docker via xvfb-run
+    if docker run --rm \
         --user "$(id -u):$(id -g)" \
         -v "$WORK_DIR":/work \
         "$IMAGE" \
-        bash -c "cd /work && xvfb-run -a -s '-screen 0 1280x1024x24' /opt/terrame/bin/terrame -autoclose target_lab.lua" \
-        > "$WORK_DIR/execution.log" 2>&1; then
-    mkdir -p "$OUT_ROOT"
-    cp "$WORK_DIR/execution.log" "$OUT_ROOT/${NAME}_err.log"
-    echo "FAILED (see $OUT_ROOT/${NAME}_err.log)" >&2
+        bash -c "
+            xvfb-run -a -s '-screen 0 1280x1024x24' /opt/terrame/bin/terrame -autoclose target_lab.lua
+        " > "$WORK_DIR/execution.log" 2>&1; then
+
+        # Verifica se o snapshot CSV foi gerado
+        if [ ! -f "$WORK_DIR/snapshot_per_year.csv" ]; then
+            echo "FAILED: Snapshot CSV nao foi produzido"
+            FAILED_LABS+=("$run_name")
+            rm -rf "$WORK_DIR"
+            continue
+        fi
+
+        # 3. Consolida os dados usando lab_per_year.py consolidate
+        CONSOLIDATE_ARGS=(
+            --name "$run_name"
+            --raw "$WORK_DIR/snapshot_per_year.csv"
+            --log "$WORK_DIR/execution.log"
+            --cells "$cells_file"
+            --source "$lab_file"
+            --out-dir "$BASE_OUT_DIR/$run_name"
+            --image "$IMAGE"
+        )
+        if [ -n "$MAX_DIFFERENCE" ]; then
+            CONSOLIDATE_ARGS+=(--max-difference "$MAX_DIFFERENCE")
+        fi
+
+        if python3 "$ROOT_DIR/scripts/lab_per_year.py" consolidate "${CONSOLIDATE_ARGS[@]}" > "$WORK_DIR/consolidate.log" 2>&1; then
+            echo "OK"
+            SUCCESS_LABS+=("$run_name")
+        else
+            echo "FAILED on consolidate"
+            cat "$WORK_DIR/consolidate.log"
+            FAILED_LABS+=("$run_name")
+        fi
+    else
+        echo "FAILED on Docker run (veja $BASE_OUT_DIR/${run_name}_err.log)"
+        FAILED_LABS+=("$run_name")
+        cp "$WORK_DIR/execution.log" "$BASE_OUT_DIR/${run_name}_err.log" 2>/dev/null || true
+    fi
+
+    rm -rf "$WORK_DIR"
+done
+
+echo "========================================================================"
+echo " Execution Summary:"
+echo " Successful: ${#SUCCESS_LABS[@]} / ${#LAB_FILES[@]}"
+if [ ${#FAILED_LABS[@]} -gt 0 ]; then
+    echo " Failed: ${FAILED_LABS[*]}"
     exit 1
+else
+    echo " Completed successfully!"
 fi
-
-[ -s "$WORK_DIR/snapshot.csv" ] || {
-    mkdir -p "$OUT_ROOT"; cp "$WORK_DIR/execution.log" "$OUT_ROOT/${NAME}_err.log"
-    echo "TerraME finished but wrote no snapshot (see $OUT_ROOT/${NAME}_err.log)" >&2; exit 1
-}
-
-python3 "$ROOT_DIR/scripts/lab_per_year.py" consolidate \
-    --name "$NAME" --raw "$WORK_DIR/snapshot.csv" --log "$WORK_DIR/execution.log" \
-    --cells "${FINALS[0]}" --source "$SRC" --image "$IMAGE" \
-    --out-dir "$OUT_DIR" "${MD_ARGS[@]}"

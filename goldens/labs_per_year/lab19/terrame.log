@@ -1,0 +1,186 @@
+
+Verifying Model parameters
+Verifying Demand parameters
+
+	Initial Demand	 Year
+
+5706.0 205.0 3.0 	1999
+
+	Interpolation Final Demand	 Year
+
+5468.0 443.0 3.0 	2004
+
+
+	Annual Demand	 Year
+
+5706 205 3 	1999
+
+5658 253 3 	2000
+
+5610 301 3 	2001
+
+5562 349 3 	2002
+
+5514 397 3 	2003
+
+5468 443 3 	2004
+
+
+Verifying Potential parameters
+Verifying Allocation parameters
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 1999
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 300
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Ordenamento: 100%
+
+
+
+Year: 1999 Iteration -> 0
+f -> 5706		demand -> 5706 difference -> 0
+d -> 205		demand -> 205 difference -> 0
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 1999
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2000
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 300
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Ordenamento: 100%
+
+
+
+Year: 2000 Iteration -> 0
+f -> 5706		demand -> 5658 difference -> -48
+d -> 205		demand -> 253 difference -> 48
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2000
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2001
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 300
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Ordenamento: 100%
+
+
+
+Year: 2001 Iteration -> 0
+f -> 5706		demand -> 5610 difference -> -96
+d -> 205		demand -> 301 difference -> 96
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2001
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2002
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 300
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Ordenamento: 100%
+
+
+
+Year: 2002 Iteration -> 0
+f -> 5706		demand -> 5562 difference -> -144
+d -> 205		demand -> 349 difference -> 144
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2002
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2003
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 300
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Ordenamento: 100%
+
+
+
+Year: 2003 Iteration -> 0
+f -> 5706		demand -> 5514 difference -> -192
+d -> 205		demand -> 397 difference -> 192
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2003
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2004
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 300
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Ordenamento: 100%
+
+
+
+Year: 2004 Iteration -> 0
+f -> 5706		demand -> 5468 difference -> -238
+d -> 205		demand -> 443 difference -> 238
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2004
+
+Saving Lab19_2004.
+Elapsed time: 00:00:03 hh:mm:ss
+
+End of Simulation
+Snapshot: lab19.png
