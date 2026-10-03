@@ -1,0 +1,551 @@
+
+Verifying Model parameters
+Verifying Demand parameters
+Verifying Potential parameters
+Verifying Allocation parameters
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 5706
+media_decl
+min: 1.195887
+max: 22.81011
+avg: 6.1039372991063
+
+dist_area_
+min: 0.4859301
+max: 0.9088736
+avg: 0.67973062982302
+
+dist_br
+min: 0.06050603
+max: 0.4632536
+avg: 0.25828216477133
+
+dist_curua
+min: 0.3817465
+max: 0.8698746
+avg: 0.62015361585772
+
+dist_rios_
+min: 0.0
+max: 0.03910329
+avg: 0.01068342532419
+
+dist_estra
+min: 6.134423e-06
+max: 0.09341099
+avg: 0.018573677444782
+
+
+
+f	pot > 0 	pot = 0
+f_pot	5913	1
+
+
+d
+Cell number: 205
+media_decl
+min: 0.8945601
+max: 12.73232
+avg: 7.000641718932
+
+dist_area_
+min: 0.4900544
+max: 0.8964458
+avg: 0.74962903543689
+
+dist_curua
+min: 0.4224268
+max: 0.8588426
+avg: 0.71773009174757
+
+
+
+d	pot > 0 	pot = 0
+d_pot	5675	239
+
+
+o
+Cell number: 3
+
+
+o	pot > 0 	pot = 0
+o_pot	0	5914
+Executing Allocation component
+
+Time: 1999
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 5000
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 1999 Iteration -> 0
+f -> 1254		demand -> 5706 difference -> 4452
+d -> 4657		demand -> 205 difference -> -4452
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 1999
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 1254
+media_decl
+min: 1.195887
+max: 22.81011
+avg: 5.6575310183267
+
+dist_area_
+min: 0.4859301
+max: 0.9088736
+avg: 0.63377768231076
+
+dist_br
+min: 0.06050603
+max: 0.4632536
+avg: 0.29565496658167
+
+dist_curua
+min: 0.3817465
+max: 0.8698746
+avg: 0.56842092956175
+
+dist_rios_
+min: 0.0
+max: 0.03910329
+avg: 0.011702893416024
+
+dist_estra
+min: 0.0001170065
+max: 0.09341099
+avg: 0.02509002296255
+
+
+
+f	pot > 0 	pot = 0
+f_pot	5878	36
+
+
+d
+Cell number: 4657
+media_decl
+min: 0.8945601
+max: 12.73232
+avg: 6.263868813246
+
+dist_area_
+min: 0.4900544
+max: 0.8964458
+avg: 0.69520293997424
+
+dist_curua
+min: 0.4224268
+max: 0.8588426
+avg: 0.63840721726063
+
+
+
+d	pot > 0 	pot = 0
+d_pot	5675	239
+
+
+o
+Cell number: 3
+
+
+o	pot > 0 	pot = 0
+o_pot	0	5914
+Executing Allocation component
+
+Time: 2000
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 5000
+Initial area for land use : f -> 1254
+Initial area for land use : d -> 4657
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2000 Iteration -> 0
+f -> 775		demand -> 5658 difference -> 4883
+d -> 5136		demand -> 253 difference -> -4883
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2000
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 775
+media_decl
+min: 1.195887
+max: 22.81011
+avg: 6.3951569265464
+
+dist_area_
+min: 0.4859301
+max: 0.9088736
+avg: 0.61880459690722
+
+dist_br
+min: 0.06050603
+max: 0.4632536
+avg: 0.31417728646907
+
+dist_curua
+min: 0.3817465
+max: 0.8698746
+avg: 0.54932888350515
+
+dist_rios_
+min: 0.0
+max: 0.03910329
+avg: 0.012720983310438
+
+dist_estra
+min: 0.0001645051
+max: 0.09313879
+avg: 0.026824542560438
+
+
+
+f	pot > 0 	pot = 0
+f_pot	5865	49
+
+
+d
+Cell number: 5136
+media_decl
+min: 0.8945601
+max: 12.70087
+avg: 6.0959043381546
+
+dist_area_
+min: 0.4900544
+max: 0.8964458
+avg: 0.69173718483551
+
+dist_curua
+min: 0.4224268
+max: 0.8588426
+avg: 0.63476540218026
+
+
+
+d	pot > 0 	pot = 0
+d_pot	5673	241
+
+
+o
+Cell number: 3
+
+
+o	pot > 0 	pot = 0
+o_pot	0	5914
+Executing Allocation component
+
+Time: 2001
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 5000
+Initial area for land use : f -> 775
+Initial area for land use : d -> 5136
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2001 Iteration -> 0
+f -> 776		demand -> 5611 difference -> 4835
+d -> 5135		demand -> 300 difference -> -4835
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2001
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 776
+media_decl
+min: 1.43785
+max: 22.81011
+avg: 6.9339688712999
+
+dist_area_
+min: 0.4859301
+max: 0.9088736
+avg: 0.6157913014157
+
+dist_br
+min: 0.06050603
+max: 0.4632536
+avg: 0.32620196743887
+
+dist_curua
+min: 0.3817465
+max: 0.8698746
+avg: 0.54289246512227
+
+dist_rios_
+min: 0.0
+max: 0.03910329
+avg: 0.013155109761905
+
+dist_estra
+min: 0.0002149986
+max: 0.09289826
+avg: 0.026320883228829
+
+
+
+f	pot > 0 	pot = 0
+f_pot	5831	83
+
+
+d
+Cell number: 5135
+media_decl
+min: 0.8945601
+max: 12.70087
+avg: 6.0143318822235
+
+dist_area_
+min: 0.4900544
+max: 0.8964458
+avg: 0.69220725165498
+
+dist_curua
+min: 0.4224268
+max: 0.8588426
+avg: 0.63575577087228
+
+
+
+d	pot > 0 	pot = 0
+d_pot	5673	241
+
+
+o
+Cell number: 3
+
+
+o	pot > 0 	pot = 0
+o_pot	0	5914
+Executing Allocation component
+
+Time: 2002
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 5000
+Initial area for land use : f -> 776
+Initial area for land use : d -> 5135
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2002 Iteration -> 0
+f -> 839		demand -> 5563 difference -> 4724
+d -> 5072		demand -> 348 difference -> -4724
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2002
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 839
+media_decl
+min: 1.43785
+max: 22.81011
+avg: 7.3242082523809
+
+dist_area_
+min: 0.4859301
+max: 0.9088736
+avg: 0.62071669678571
+
+dist_br
+min: 0.06050603
+max: 0.4632536
+avg: 0.32799290565476
+
+dist_curua
+min: 0.3817465
+max: 0.8698746
+avg: 0.54630242297619
+
+dist_rios_
+min: 0.0
+max: 0.03910329
+avg: 0.0131544569375
+
+dist_estra
+min: 0.0002149986
+max: 0.09289826
+avg: 0.026377760392619
+
+
+
+f	pot > 0 	pot = 0
+f_pot	5831	83
+
+
+d
+Cell number: 5072
+media_decl
+min: 0.8945601
+max: 12.70087
+avg: 5.9382943875616
+
+dist_area_
+min: 0.4900544
+max: 0.8964458
+avg: 0.69234067817859
+
+dist_curua
+min: 0.4224268
+max: 0.8588426
+avg: 0.63634438188449
+
+
+
+d	pot > 0 	pot = 0
+d_pot	5673	241
+
+
+o
+Cell number: 3
+
+
+o	pot > 0 	pot = 0
+o_pot	0	5914
+Executing Allocation component
+
+Time: 2003
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 5000
+Initial area for land use : f -> 839
+Initial area for land use : d -> 5072
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2003 Iteration -> 0
+f -> 885		demand -> 5516 difference -> 4631
+d -> 5026		demand -> 395 difference -> -4631
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2003
+
+Executing Demand component
+Executing Potential component
+
+
+f
+Cell number: 885
+media_decl
+min: 1.43785
+max: 22.81011
+avg: 7.6637829356659
+
+dist_area_
+min: 0.4859301
+max: 0.9088736
+avg: 0.63123259277652
+
+dist_br
+min: 0.06050603
+max: 0.4632536
+avg: 0.32505947127539
+
+dist_curua
+min: 0.3817465
+max: 0.8698746
+avg: 0.55581398803612
+
+dist_rios_
+min: 0.0
+max: 0.03910329
+avg: 0.013000299944131
+
+dist_estra
+min: 0.0002149986
+max: 0.09289826
+avg: 0.026789007460835
+
+
+
+f	pot > 0 	pot = 0
+f_pot	5831	83
+
+
+d
+Cell number: 5026
+media_decl
+min: 0.8945601
+max: 12.70087
+avg: 5.8657630155361
+
+dist_area_
+min: 0.4900544
+max: 0.8964458
+avg: 0.69114267127511
+
+dist_curua
+min: 0.4224268
+max: 0.8588426
+avg: 0.63549192186195
+
+
+
+d	pot > 0 	pot = 0
+d_pot	5673	241
+
+
+o
+Cell number: 3
+
+
+o	pot > 0 	pot = 0
+o_pot	0	5914
+Executing Allocation component
+
+Time: 2004
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 5000
+Initial area for land use : f -> 885
+Initial area for land use : d -> 5026
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2004 Iteration -> 0
+f -> 923		demand -> 5468 difference -> 4545
+d -> 4988		demand -> 443 difference -> -4545
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2004
+
+Saving Lab18_2004.
+Elapsed time: 00:00:02 hh:mm:ss
+
+End of Simulation
+Snapshot: lab18.png

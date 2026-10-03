@@ -1,0 +1,137 @@
+
+Verifying Model parameters
+Verifying Demand parameters
+Verifying Potential parameters
+Verifying Allocation parameters
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 1999
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 500
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 1999 Iteration -> 0
+f -> 5705		demand -> 5706 difference -> 1
+d -> 206		demand -> 205 difference -> -1
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 1999
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2000
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 500
+Initial area for land use : f -> 5705
+Initial area for land use : d -> 206
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2000 Iteration -> 0
+f -> 5705		demand -> 5658 difference -> -47
+d -> 206		demand -> 253 difference -> 47
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2000
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2001
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 500
+Initial area for land use : f -> 5705
+Initial area for land use : d -> 206
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2001 Iteration -> 0
+f -> 5705		demand -> 5611 difference -> -94
+d -> 206		demand -> 300 difference -> 94
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2001
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2002
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 500
+Initial area for land use : f -> 5705
+Initial area for land use : d -> 206
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2002 Iteration -> 0
+f -> 5705		demand -> 5563 difference -> -142
+d -> 206		demand -> 348 difference -> 142
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2002
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2003
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 500
+Initial area for land use : f -> 5705
+Initial area for land use : d -> 206
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2003 Iteration -> 0
+f -> 5705		demand -> 5516 difference -> -189
+d -> 206		demand -> 395 difference -> 189
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2003
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2004
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 500
+Initial area for land use : f -> 5705
+Initial area for land use : d -> 206
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+
+Year: 2004 Iteration -> 0
+f -> 5705		demand -> 5468 difference -> -237
+d -> 206		demand -> 443 difference -> 237
+o -> 3		demand -> 3 difference -> 0
+
+Demand allocated correctly in this time: 2004
+
+Saving Lab14_2004.
+Elapsed time: 00:00:02 hh:mm:ss
+
+End of Simulation
+Snapshot: lab14.png

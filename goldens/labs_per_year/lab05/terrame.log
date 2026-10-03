@@ -1,0 +1,119 @@
+
+Verifying Model parameters
+Verifying Demand parameters
+
+	Initial Demand	 Year
+
+137878.16912795 19982.6288228 6489.20204925 	2008
+
+	Interpolation Middle Demand	 Year
+
+137110.3214327 20750.47651805 6489.20204925 	2011
+
+	Interpolation Final Demand	 Year
+
+136253.41302395 21607.3849268 6489.20204925 	2014
+
+
+	Annual Demand	 Year
+
+137878 19983 6489 	2008
+
+137622 20239 6489 	2009
+
+137366 20495 6489 	2010
+
+137110 20750 6489 	2011
+
+136824 21036 6489 	2012
+
+136538 21322 6489 	2013
+
+136253 21607 6489 	2014
+
+
+Verifying Potential parameters
+Verifying Allocation parameters
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2008	Step: 0
+f Area: 137878	Difference: 0
+d Area: 19982	Difference: -1
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2008.	Number of iterations: 0	Maximum error: 0.37117720000606
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2009	Step: 0
+f Area: 137418	Difference: -204
+d Area: 20334	Difference: 95
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2009.	Number of iterations: 0	Maximum error: 203.71739592639
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2010	Step: 0
+f Area: 137079	Difference: -287
+d Area: 20673	Difference: 178
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2010.	Number of iterations: 0	Maximum error: 286.69076541541
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2011	Step: 0
+f Area: 136752	Difference: -358
+d Area: 21000	Difference: 250
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2011.	Number of iterations: 0	Maximum error: 357.49327923913
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2012	Step: 0
+f Area: 136437	Difference: -387
+d Area: 21316	Difference: 280
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2012.	Number of iterations: 0	Maximum error: 386.9952857054
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2013	Step: 0
+f Area: 136131	Difference: -407
+d Area: 21622	Difference: 300
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2013.	Number of iterations: 0	Maximum error: 406.14162362472
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Year: 2014	Step: 0
+f Area: 135836	Difference: -417
+d Area: 21918	Difference: 311
+outros Area: 6489	Difference: 0
+
+Demand allocated correctly in 2014.	Number of iterations: 0	Maximum error: 416.75612215506
+
+Saving Lab05_2014.
+Elapsed time: 00:00:03 hh:mm:ss
+
+End of Simulation
+Snapshot: lab05.png

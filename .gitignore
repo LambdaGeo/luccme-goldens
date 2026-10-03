@@ -7,3 +7,4 @@ goldens/**/*.prj
 goldens/**/*.cpg
 goldens/**/*.qix
 release/*.zip
+__pycache__/

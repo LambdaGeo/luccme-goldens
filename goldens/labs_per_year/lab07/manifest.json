@@ -1,0 +1,69 @@
+{
+  "lab": "lab07",
+  "name": "lab07",
+  "variant_of": null,
+  "overrides": {},
+  "source": {
+    "script": "/home/sergio/develop/github/lambdageo/luccme-goldens/sources/labs/lab07.lua",
+    "sha256": "76457b928583298daa415762d455c8bd5962b4de5ebc82002dc6cd2ae0a89ef9"
+  },
+  "engine": {
+    "image": "profsergiocosta/terrame-luccme",
+    "terrame": "2.0.1",
+    "luccme": "3.1"
+  },
+  "generator": {
+    "script": "scripts/lab_per_year.py",
+    "sha256": "636ac42c21bb751e3af3166a2538c7413303373b2e0637ed8782bb486f989357",
+    "recorder": "scripts/per_year_snapshot.lua",
+    "recorder_sha256": "23752d06b0baf2fd3dbfc72a8220c8f592a13044d2e4c42bb79779775f127306"
+  },
+  "status": "ok",
+  "years": [
+    2008,
+    2025
+  ],
+  "n_cells": 6574,
+  "columns": [
+    "f_out",
+    "d_out",
+    "outros_out",
+    "f_pot",
+    "d_pot",
+    "outros_pot"
+  ],
+  "file": {
+    "name": "lab07.csv.gz",
+    "rows": 118332,
+    "sha256": "cce007f16c0a30b07929b303ec9e8a02ebfe2b05ee0759651a34c4b045d18988"
+  },
+  "crosscheck_vs_final_golden": {
+    "tolerance": 1e-09,
+    "file": "Lab07_2025.csv",
+    "max_abs_diff": {
+      "d_out": 0.993082944046
+    },
+    "note": "last year of the CSV compared with the canonical final-year golden"
+  },
+  "iterations_per_year": {
+    "2008": 0,
+    "2009": 0,
+    "2010": 0,
+    "2011": 0,
+    "2012": 0,
+    "2013": 0,
+    "2014": 0,
+    "2015": 0,
+    "2016": 0,
+    "2017": 0,
+    "2018": 0,
+    "2019": 0,
+    "2020": 0,
+    "2021": 0,
+    "2022": 0,
+    "2023": 0,
+    "2024": 0,
+    "2025": 0
+  },
+  "iterations_note": "continuous: LuccME's 'Number of iterations'; discrete: largest n in 'Iteration -> n' (0 = first pass accepted); null = not reported in the log"
+}

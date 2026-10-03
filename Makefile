@@ -5,9 +5,10 @@
 
 DOCKER_IMAGE ?= profsergiocosta/terrame-luccme
 LAB ?= all
+MD ?=
 FILL ?= all
 
-.PHONY: help docker-pull run-labs run-lab run-fill package clean check
+.PHONY: help docker-pull run-labs run-lab run-labs-per-year compare-per-year run-fill package clean check
 
 help:
 	@echo "luccme-goldens — Automation Tasks"
@@ -15,6 +16,9 @@ help:
 	@echo "  make docker-pull         Pull official Docker image from Docker Hub"
 	@echo "  make run-labs            Execute all 21 LuccME labs in Docker"
 	@echo "  make run-labs LAB=15     Execute a specific lab (e.g. lab15, lab01, 15)"
+	@echo "  make run-labs-per-year   Execute per-year goldens for all labs"
+	@echo "  make run-labs-per-year LAB=15 [MD=10]  Per-year golden of one lab (MD = maxDifference variant)"
+	@echo "  make compare-per-year NEW=... REF=...  Compare two per-year goldens (.csv.gz)"
 	@echo "  make run-fill            Execute all 4 TerraME GIS fill cases in Docker"
 	@echo "  make run-fill FILL=emas  Execute a specific fill case (itaituba, amazonia, emas, majority)"
 	@echo "  make package             Compute SHA-256 hashes and build release ZIP"
@@ -28,6 +32,12 @@ run-labs:
 	bash scripts/run_all_labs.sh $(LAB) $(DOCKER_IMAGE)
 
 run-lab: run-labs
+
+run-labs-per-year:
+	bash scripts/run_per_year.sh $(LAB) $(if $(MD),--max-difference $(MD),) --image $(DOCKER_IMAGE)
+
+compare-per-year:
+	python3 scripts/lab_per_year.py compare $(NEW) $(REF) $(if $(NEWM),--manifests $(NEWM) $(REFM),)
 
 run-fill:
 	bash scripts/run_all_fill.sh $(FILL) $(DOCKER_IMAGE)

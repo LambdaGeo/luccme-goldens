@@ -1,0 +1,131 @@
+
+Verifying Model parameters
+Verifying Demand parameters
+Verifying Potential parameters
+Verifying Allocation parameters
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 1999
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 106
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+demand	f	5706	trajectory size	5911
+areaAlloc	f	5706
+demand	d	205	trajectory size	205
+areaAlloc	d	205
+
+Demand allocated correctly in this time: 1999
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2000
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 106
+Initial area for land use : f -> 5706
+Initial area for land use : d -> 205
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+demand	f	5658	trajectory size	5911
+areaAlloc	f	5658
+demand	d	253	trajectory size	253
+areaAlloc	d	253
+
+Demand allocated correctly in this time: 2000
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2001
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 106
+Initial area for land use : f -> 5658
+Initial area for land use : d -> 253
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+demand	f	5611	trajectory size	5911
+areaAlloc	f	5611
+demand	d	300	trajectory size	300
+areaAlloc	d	300
+
+Demand allocated correctly in this time: 2001
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2002
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 106
+Initial area for land use : f -> 5611
+Initial area for land use : d -> 300
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+demand	f	5563	trajectory size	5911
+areaAlloc	f	5563
+demand	d	348	trajectory size	348
+areaAlloc	d	348
+
+Demand allocated correctly in this time: 2002
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2003
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 106
+Initial area for land use : f -> 5563
+Initial area for land use : d -> 348
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+demand	f	5516	trajectory size	5911
+areaAlloc	f	5516
+demand	d	395	trajectory size	395
+areaAlloc	d	395
+
+Demand allocated correctly in this time: 2003
+
+Executing Demand component
+Executing Potential component
+Executing Allocation component
+
+Time: 2004
+-------------------------------------------------------------------------------
+Cell Area 1
+Num of cells 5914
+Max diff area 106
+Initial area for land use : f -> 5516
+Initial area for land use : d -> 395
+Initial area for land use : o -> 3
+-------------------------------------------------------------------------------
+demand	f	5468	trajectory size	5911
+areaAlloc	f	5468
+demand	d	443	trajectory size	443
+areaAlloc	d	443
+
+Demand allocated correctly in this time: 2004
+
+Saving Lab10_2004.
+Elapsed time: 00:00:02 hh:mm:ss
+
+End of Simulation
+Snapshot: lab10.png

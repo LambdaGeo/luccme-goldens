@@ -1,0 +1,58 @@
+{
+  "lab": "lab01",
+  "name": "lab01",
+  "variant_of": null,
+  "overrides": {},
+  "source": {
+    "script": "/home/sergio/develop/github/lambdageo/luccme-goldens/sources/labs/lab01.lua",
+    "sha256": "d8e16d718c3654b0d7f89d743413f3ee781d6fb05574231fb843af895c238dfa"
+  },
+  "engine": {
+    "image": "profsergiocosta/terrame-luccme",
+    "terrame": "2.0.1",
+    "luccme": "3.1"
+  },
+  "generator": {
+    "script": "scripts/lab_per_year.py",
+    "sha256": "636ac42c21bb751e3af3166a2538c7413303373b2e0637ed8782bb486f989357",
+    "recorder": "scripts/per_year_snapshot.lua",
+    "recorder_sha256": "23752d06b0baf2fd3dbfc72a8220c8f592a13044d2e4c42bb79779775f127306"
+  },
+  "status": "ok",
+  "years": [
+    2008,
+    2014
+  ],
+  "n_cells": 6574,
+  "columns": [
+    "f_out",
+    "d_out",
+    "outros_out",
+    "f_pot",
+    "d_pot",
+    "outros_pot"
+  ],
+  "file": {
+    "name": "lab01.csv.gz",
+    "rows": 46018,
+    "sha256": "35a3bbfc7b66a13cc3ada0cb78c3a989511dbaa317d01de72d230deff9637497"
+  },
+  "crosscheck_vs_final_golden": {
+    "tolerance": 1e-09,
+    "file": "Lab01_2014.csv",
+    "max_abs_diff": {
+      "d_out": 5.000000413701855e-11
+    },
+    "note": "last year of the CSV compared with the canonical final-year golden"
+  },
+  "iterations_per_year": {
+    "2008": 0,
+    "2009": 0,
+    "2010": 0,
+    "2011": 0,
+    "2012": 0,
+    "2013": 0,
+    "2014": 0
+  },
+  "iterations_note": "continuous: LuccME's 'Number of iterations'; discrete: largest n in 'Iteration -> n' (0 = first pass accepted); null = not reported in the log"
+}
