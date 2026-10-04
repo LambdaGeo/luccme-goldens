@@ -1,0 +1,52 @@
+{
+  "lab": "lab15",
+  "name": "lab15_md10",
+  "variant_of": "lab15",
+  "overrides": {
+    "maxDifference": 10.0
+  },
+  "source": {
+    "script": "/home/sergio/develop/github/lambdageo/luccme-goldens/sources/labs/lab15.lua",
+    "sha256": "bc9faf3a26aafa42c0075f114c0def46a1320e1f89ab52b7886b27ca72075bf7"
+  },
+  "engine": {
+    "image": "profsergiocosta/terrame-luccme",
+    "terrame": "2.0.1",
+    "luccme": "3.1"
+  },
+  "generator": {
+    "script": "scripts/lab_per_year.py",
+    "sha256": "902800bfedc55438e626346a2acf36989e881875b2302178f9b80d150c0dae82",
+    "recorder": "scripts/per_year_snapshot.lua",
+    "recorder_sha256": "840f79381a89a44e66c7f294d1c39e0cc8ee75f0a3aa4ebacd4f9bec9a533e6d"
+  },
+  "status": "ok",
+  "years": [
+    1999,
+    2004
+  ],
+  "n_cells": 5914,
+  "columns": [
+    "f_out",
+    "d_out",
+    "o_out",
+    "f_pot",
+    "d_pot",
+    "o_pot"
+  ],
+  "file": {
+    "name": "lab15_md10.csv.gz",
+    "rows": 35484,
+    "sha256": "a549e1680fef0e4c0e29697c63c4cc63b1ee5539edc53ad914b30456630a65fa"
+  },
+  "crosscheck_vs_final_golden": null,
+  "iterations_per_year": {
+    "1999": 0,
+    "2000": 67,
+    "2001": 56,
+    "2002": 56,
+    "2003": 61,
+    "2004": 61
+  },
+  "iterations_note": "continuous: LuccME's 'Number of iterations'; discrete: largest n in 'Iteration -> n' (0 = first pass accepted); null = not reported in the log"
+}
