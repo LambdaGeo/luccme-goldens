@@ -39,8 +39,13 @@ python3 -c "
 import json, hashlib, os, glob, zipfile
 
 files_info = []
+
+def is_run_log(path):
+    # Execution logs of the final-state labs are run artifacts (not goldens): never packaged
+    return path.replace(os.sep, '/').startswith('goldens/labs/') and path.endswith('.log')
+
 for f in sorted(glob.glob('goldens/**/*.*', recursive=True)):
-    if os.path.isfile(f) and not f.endswith('.sha256'):
+    if os.path.isfile(f) and not f.endswith('.sha256') and not is_run_log(f):
         with open(f, 'rb') as fp:
             digest = hashlib.sha256(fp.read()).hexdigest()
         size = os.path.getsize(f)
@@ -73,6 +78,8 @@ with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as z:
         for root, dirs, files in os.walk(folder):
             for file in files:
                 full_path = os.path.join(root, file)
+                if is_run_log(full_path):
+                    continue
                 z.write(full_path)
 
 print(f'Created {zip_path} ({os.path.getsize(zip_path):,} bytes)')
