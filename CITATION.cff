@@ -5,6 +5,12 @@ title: "luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 
 abstract: "Canonical reference execution outputs (goldens), cryptographic hashes, and Dockerized execution harness for legacy TerraME 2.0.1 and LuccME 3.1 land-use change models."
 version: 1.0.0
 date-released: 2026-10-02
+references:
+  - type: software
+    title: "terrame-docker: TerraME and LuccME in a Docker image"
+    version: 0.4.2
+    doi: 10.5281/zenodo.23160784
+    repository-code: "https://github.com/profsergiocosta/terrame-docker"
 license: MIT
 doi: "10.5281/zenodo.23107748"
 url: "https://github.com/LambdaGeo/luccme-goldens"

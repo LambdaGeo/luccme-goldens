@@ -77,6 +77,15 @@ make compare-per-year NEW=goldens/labs_per_year/lab15/lab15.csv.gz REF=other/lab
 
 The files released with each version are listed in `manifest.json`.
 
+## Numerical reproducibility
+
+All 21 labs and their 2 variants (`lab01_md1643`, `lab15_md10`) were regenerated with the image
+above and compared with the v1.0.0 goldens: every file matched within a maximum absolute
+difference of 1e-12. On the same host, `lab01` is not bit-for-bit deterministic: in 8 consecutive
+runs the output differed by at most 1e-12 (one unit of the 12th decimal place), producing several
+distinct file hashes. File hashes therefore identify one frozen run; **verify with a numerical
+tolerance (1e-9) rather than by hash** (see `python3 scripts/lab_per_year.py compare`).
+
 ### Suite B: TerraME GIS Fill Cellular Space (`sources/fill/` → `goldens/fill/`)
 Validates spatial aggregation and feature extraction on cellular grids against TerraME's `cl:fill{}`:
 
@@ -124,6 +133,14 @@ If you wish to re-execute the legacy TerraME models and regenerate all golden ou
 * Docker engine installed and running.
 
 ### 1. Pull the Docker Appliance
+
+The goldens in this release were generated with `profsergiocosta/terrame-luccme` **0.4.2**
+(TerraME 2.0.1, LuccME 3.1, GNU `time`), pinned by digest:
+
+    profsergiocosta/terrame-luccme@sha256:e0f46a7faed8a601c2ca10f3ba0dcebb352b13b8361e40d6580a0a034c21fb2c
+
+Source of the image (Dockerfile): https://github.com/profsergiocosta/terrame-docker,
+archived at https://doi.org/10.5281/zenodo.23160784.
 
 ```bash
 make docker-pull
