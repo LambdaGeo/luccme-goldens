@@ -6,7 +6,7 @@
     "maxDifference": 10.0
   },
   "source": {
-    "script": "/home/sergio/develop/github/lambdageo/luccme-goldens/sources/labs/lab15.lua",
+    "script": "sources/labs/lab15.lua",
     "sha256": "bc9faf3a26aafa42c0075f114c0def46a1320e1f89ab52b7886b27ca72075bf7"
   },
   "engine": {

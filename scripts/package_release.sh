@@ -7,6 +7,12 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 RELEASE_DIR="$ROOT_DIR/release"
 VERSION="${VERSION:-v1.1.0}"
+# Image used to generate the goldens; prefer a digest (repo@sha256:...) so it is verifiable
+DOCKER_IMAGE="${DOCKER_IMAGE:-profsergiocosta/terrame-luccme}"
+case "$DOCKER_IMAGE" in
+    *@sha256:*) ;;
+    *) echo "Warning: DOCKER_IMAGE has no digest (@sha256:...); manifest.json will not pin the exact image." >&2 ;;
+esac
 ZIP_NAME="luccme-goldens-${VERSION}.zip"
 CHECKSUMS_FILE="$ROOT_DIR/checksums.sha256"
 MANIFEST_FILE="$ROOT_DIR/manifest.json"
@@ -22,7 +28,7 @@ cd "$ROOT_DIR"
 # 1. Compute SHA-256 for all goldens
 echo "==> Computing SHA-256 checksums..."
 rm -f "$CHECKSUMS_FILE"
-find goldens/ -type f \( -name "*.csv" -o -name "*.csv.gz" -o -name "*.shp" -o -name "*.dbf" -o -name "*.tif" \) | sort | while read -r f; do
+find goldens/ -type f \( -name "*.csv" -o -name "*.csv.gz" -o -name "*.shp" -o -name "*.dbf" -o -name "*.tif" -o -path "goldens/timing/*.json" \) | sort | while read -r f; do
     sha256sum "$f" >> "$CHECKSUMS_FILE"
 done
 cat "$CHECKSUMS_FILE"
@@ -48,7 +54,7 @@ manifest = {
     'name': 'luccme-goldens',
     'version': '$VERSION',
     'generator': 'TerraME 2.0.1 + LuccME 3.1 in Docker (Ubuntu 18.04)',
-    'docker_image': 'profsergiocosta/terrame-luccme',
+    'docker_image': '$DOCKER_IMAGE',
     'description': 'Canonical reference execution outputs (goldens) for LuccME simulation models and TerraME GIS fill operations.',
     'files': files_info
 }

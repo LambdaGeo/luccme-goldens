@@ -4,7 +4,7 @@
   "variant_of": null,
   "overrides": {},
   "source": {
-    "script": "/home/sergio/develop/github/lambdageo/luccme-goldens/sources/labs/lab07.lua",
+    "script": "sources/labs/lab07.lua",
     "sha256": "76457b928583298daa415762d455c8bd5962b4de5ebc82002dc6cd2ae0a89ef9"
   },
   "engine": {

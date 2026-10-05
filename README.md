@@ -191,7 +191,7 @@ Each run automatically generates:
 ### 4. Build Release Package and Checksums
 
 ```bash
-make package
+make package DOCKER_IMAGE=repo@sha256:<DIGEST>
 
 ```
 
@@ -263,3 +263,46 @@ Upstream TerraME and LuccME frameworks are Copyright (C) 2001–2017 INPE and Te
 
 ```
 
+
+---
+
+## Timing measurements and benchmark pins
+
+### TerraME time and memory (fill cases)
+
+Timing is a **frozen measurement**, not a regenerable golden: it varies from run to run, so the
+SHA-256 of `goldens/timing/*` identifies one specific measurement made on the machine described in
+`environment.json`. It is reported for context only and is never a pass/fail criterion.
+
+```bash
+# 1. Image pinned by digest, with GNU time (profsergiocosta/terrame-luccme >= 0.4.2)
+#    docker image inspect --format '{{index .RepoDigests 0}}' profsergiocosta/terrame-luccme:0.4.2
+# 2. Measure (rep 0 is a warm-up and is excluded from the summary)
+make timing FILL=connectivity REPS=5
+make timing FILL=itaituba REPS=5      # or FILL=all
+# 3. Environment record + summary (median, min, max, peak memory)
+make timing-report
+```
+
+Time is measured inside the container around the `terrame` command only (`docker run` and Xvfb
+start-up are not counted), with `--cpus=1 --memory=4g` (override with `CPUS=` / `MEM=`). Use the
+same limits when timing DisSCube so the comparison is fair.
+
+Outputs: `goldens/timing/raw/<dataset>_terrame_timing.csv`, `goldens/timing/timing_terrame.json`,
+`goldens/timing/environment.json`.
+
+### Updating the hashes pinned by the benchmarks
+
+After committing (and tagging) the goldens, export the pins and update the benchmark in one step:
+
+```bash
+make package VERSION=v1.1.0 DOCKER_IMAGE=$IMG     # manifest.json + checksums.sha256 + release ZIP
+git add -A && git commit -m "Release v1.1.0" && git tag v1.1.0 && git push --follow-tags
+make pins REF=v1.1.0 DOI=10.5281/zenodo.NNNNNNN BENCH=../disscube-benchmark
+```
+
+`make pins` writes `benchmark_pins.json` (SHA-256, size and immutable raw URL for every tracked file
+under `goldens/`) and rewrites `reference_url` / `reference_sha256` in each
+`benchmarks/terrame_fill/<dataset>.compare.toml`. It refuses to run if a file differs from the
+given ref, so a pinned URL can never point to different bytes than the pinned hash. Without `BENCH`
+it only writes `benchmark_pins.json`.
