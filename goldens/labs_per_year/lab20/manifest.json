@@ -8,15 +8,15 @@
     "sha256": "9de45b458d507eb8450e6b9cafe5370d891260862bbb2156950ed3a1b585af82"
   },
   "engine": {
-    "image": "profsergiocosta/terrame-luccme",
+    "image": "profsergiocosta/terrame-luccme@sha256:e0f46a7faed8a601c2ca10f3ba0dcebb352b13b8361e40d6580a0a034c21fb2c",
     "terrame": "2.0.1",
     "luccme": "3.1"
   },
   "generator": {
     "script": "scripts/lab_per_year.py",
-    "sha256": "636ac42c21bb751e3af3166a2538c7413303373b2e0637ed8782bb486f989357",
+    "sha256": "b7d08c91c1a78e89647bad2ea652a0c124f03240097ad7f872496f904dcc43bc",
     "recorder": "scripts/per_year_snapshot.lua",
-    "recorder_sha256": "23752d06b0baf2fd3dbfc72a8220c8f592a13044d2e4c42bb79779775f127306"
+    "recorder_sha256": "840f79381a89a44e66c7f294d1c39e0cc8ee75f0a3aa4ebacd4f9bec9a533e6d"
   },
   "status": "ok",
   "years": [
