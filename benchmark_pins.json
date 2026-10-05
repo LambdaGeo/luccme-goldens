@@ -1,0 +1,553 @@
+{
+  "repo": "LambdaGeo/luccme-goldens",
+  "ref": "v1.1.0",
+  "ref_commit": "de1aa00a30254c020c2297b3bc5ad751a3d6fbc5",
+  "doi": "10.5281/zenodo.23161342",
+  "generated_utc": "2026-10-05T12:04:14+00:00",
+  "fill": {
+    "amazonia": {
+      "sha256": "2203306cfd68b6c43fc6d06dc0cfc6ee3e9445e6e8e00fc476b56b07255620fa",
+      "size_bytes": 165662,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/amazonia_terrame.csv"
+    },
+    "connectivity": {
+      "sha256": "703be617538521002a7fa4a98a34b5f2957ad7624997c6e737683e82fd6e6fda",
+      "size_bytes": 804475,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/connectivity_terrame.csv"
+    },
+    "emas": {
+      "sha256": "332a762b2d9444ffbdd22acdf6406feff22dbb005f129fa5de1efdda930e3939",
+      "size_bytes": 242551,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/emas_terrame.csv"
+    },
+    "itaituba": {
+      "sha256": "36b7648881b231eeee9e86aede6d22791215786c8bf05a5b38fe19101989d6fb",
+      "size_bytes": 65185,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/itaituba_terrame.csv"
+    },
+    "majority": {
+      "sha256": "8c9bf6ff53cfae4443196d6d11191526a8b5ca6b29f9e2615fdefe88c9ff3d90",
+      "size_bytes": 22600,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/majority_terrame.csv"
+    }
+  },
+  "timing": {
+    "goldens/timing/environment.json": {
+      "sha256": "ed8e5b0c06f713418e77acc7f6a6dd330ff160605ed5e54e969902b818104d64",
+      "size_bytes": 550,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/timing/environment.json"
+    },
+    "goldens/timing/raw/connectivity_terrame_timing.csv": {
+      "sha256": "8d7b7717a9a657cba6376297ba1e32e157def49fa7f35b751e91dd4746cc082d",
+      "size_bytes": 185,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/timing/raw/connectivity_terrame_timing.csv"
+    },
+    "goldens/timing/raw/itaituba_terrame_timing.csv": {
+      "sha256": "3e38943361bddf6a845b2c626142de3f0dd6696fd1f0a097ae9022bc36df77e2",
+      "size_bytes": 185,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/timing/raw/itaituba_terrame_timing.csv"
+    },
+    "goldens/timing/timing_terrame.json": {
+      "sha256": "a89a44ffadf1348a88ee79f7795854045b4fa71a57e53898f2a5bc21279f4b3f",
+      "size_bytes": 534,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/timing/timing_terrame.json"
+    }
+  },
+  "files": {
+    "goldens/fill/amazonia_terrame.csv": {
+      "sha256": "2203306cfd68b6c43fc6d06dc0cfc6ee3e9445e6e8e00fc476b56b07255620fa",
+      "size_bytes": 165662,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/amazonia_terrame.csv"
+    },
+    "goldens/fill/connectivity_terrame.csv": {
+      "sha256": "703be617538521002a7fa4a98a34b5f2957ad7624997c6e737683e82fd6e6fda",
+      "size_bytes": 804475,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/connectivity_terrame.csv"
+    },
+    "goldens/fill/emas_terrame.csv": {
+      "sha256": "332a762b2d9444ffbdd22acdf6406feff22dbb005f129fa5de1efdda930e3939",
+      "size_bytes": 242551,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/emas_terrame.csv"
+    },
+    "goldens/fill/itaituba_terrame.csv": {
+      "sha256": "36b7648881b231eeee9e86aede6d22791215786c8bf05a5b38fe19101989d6fb",
+      "size_bytes": 65185,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/itaituba_terrame.csv"
+    },
+    "goldens/fill/majority_terrame.csv": {
+      "sha256": "8c9bf6ff53cfae4443196d6d11191526a8b5ca6b29f9e2615fdefe88c9ff3d90",
+      "size_bytes": 22600,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/fill/majority_terrame.csv"
+    },
+    "goldens/labs/Lab01_2014.csv": {
+      "sha256": "1ec2eea978a672b9c3d7f3fab2159f81dea633892482fac5141370b493fed104",
+      "size_bytes": 940219,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab01_2014.csv"
+    },
+    "goldens/labs/Lab02_2014.csv": {
+      "sha256": "06498fba7c3561455693a0ff88fd2afc22d897fbada128e240dc66bab7c97cd7",
+      "size_bytes": 945607,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab02_2014.csv"
+    },
+    "goldens/labs/Lab03_2014.csv": {
+      "sha256": "eaf5d01f06961270f53d28655455838d6a55e615d0295db8a9812eb4f28f21ad",
+      "size_bytes": 945617,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab03_2014.csv"
+    },
+    "goldens/labs/Lab04_2014.csv": {
+      "sha256": "d4011a3dd1f346bd7a228b8169fbbe0ecf76732cf35c8073171d4439b3c43133",
+      "size_bytes": 945670,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab04_2014.csv"
+    },
+    "goldens/labs/Lab05_2014.csv": {
+      "sha256": "41dcdebcb8e1c27ac7c15404c44ea01477b8b509865b99536fcf611fe9c682be",
+      "size_bytes": 945647,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab05_2014.csv"
+    },
+    "goldens/labs/Lab06_2014.csv": {
+      "sha256": "aa5ee281b56864e826c2c0f320eeeac94ff1086fda03baecb37b5bac909ac0b2",
+      "size_bytes": 945645,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab06_2014.csv"
+    },
+    "goldens/labs/Lab07_2025.csv": {
+      "sha256": "544ff68338ff13510f0c902198ae48baedcbbc0d58d63d63a2e13da12d8f16af",
+      "size_bytes": 951784,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab07_2025.csv"
+    },
+    "goldens/labs/Lab08_2014.csv": {
+      "sha256": "c507ebb28e703a774ba1fe5b30d81ab20bebe0be901e08b4fa3706a325ed1a76",
+      "size_bytes": 941823,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab08_2014.csv"
+    },
+    "goldens/labs/Lab09_2014.csv": {
+      "sha256": "81d6a7852a92d366f7d93326e22810bd5922ea816fa5a368d43d4443d3c5adc7",
+      "size_bytes": 919485,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab09_2014.csv"
+    },
+    "goldens/labs/Lab10_2004.csv": {
+      "sha256": "d94e160c34a109026d32487f2d10ab3e354429eb7c157380333500e3cb5f18e0",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab10_2004.csv"
+    },
+    "goldens/labs/Lab11_2004.csv": {
+      "sha256": "c7ec813a5a30fbf9ab392b15d49b4c86837ee13bb81fe713742fb682276f3372",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab11_2004.csv"
+    },
+    "goldens/labs/Lab12_2004.csv": {
+      "sha256": "c84f41bda4245099d5ef543fad3225d285c0ed3c120a4a5f2234b97e4bbd581f",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab12_2004.csv"
+    },
+    "goldens/labs/Lab13_2004.csv": {
+      "sha256": "a9808c13502f11dd45355928d73fa90edf39e8ca3a85b02e10b7752ad66d4847",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab13_2004.csv"
+    },
+    "goldens/labs/Lab14_2004.csv": {
+      "sha256": "017d0ff76678128b2e8545fd3b63df4eb2a84ec390c57700c0ba24ae3baa426e",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab14_2004.csv"
+    },
+    "goldens/labs/Lab15_2004.csv": {
+      "sha256": "a3a2f6828c372a16c6a238fb860aa01d7f2d5b0c6aebae1d7cf89d66bf331fed",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab15_2004.csv"
+    },
+    "goldens/labs/Lab16_2004.csv": {
+      "sha256": "a3a2f6828c372a16c6a238fb860aa01d7f2d5b0c6aebae1d7cf89d66bf331fed",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab16_2004.csv"
+    },
+    "goldens/labs/Lab17_2004.csv": {
+      "sha256": "a3a2f6828c372a16c6a238fb860aa01d7f2d5b0c6aebae1d7cf89d66bf331fed",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab17_2004.csv"
+    },
+    "goldens/labs/Lab18_2004.csv": {
+      "sha256": "d9b00e78e29f6be98620b317e55e1861b68b6895e9aa5bb68624c31960929376",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab18_2004.csv"
+    },
+    "goldens/labs/Lab19_2004.csv": {
+      "sha256": "1b1ebe9042066ba14083b03887712619554232a4a420cb9aef4c325d76670a08",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab19_2004.csv"
+    },
+    "goldens/labs/Lab20_2004.csv": {
+      "sha256": "a3a2f6828c372a16c6a238fb860aa01d7f2d5b0c6aebae1d7cf89d66bf331fed",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab20_2004.csv"
+    },
+    "goldens/labs/Lab21_2004.csv": {
+      "sha256": "bf20dfb568468805564572c0ac652377c8cfe0893cfc186541421fc8389b4f17",
+      "size_bytes": 1001787,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs/Lab21_2004.csv"
+    },
+    "goldens/labs_per_year/lab01/lab01.csv.gz": {
+      "sha256": "35a3bbfc7b66a13cc3ada0cb78c3a989511dbaa317d01de72d230deff9637497",
+      "size_bytes": 1563931,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab01/lab01.csv.gz"
+    },
+    "goldens/labs_per_year/lab01/manifest.json": {
+      "sha256": "d9b37ed9eb70d5ddc1cc27f4844c85fd46629f3be79b6edee5f5cee050bdd06a",
+      "size_bytes": 1556,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab01/manifest.json"
+    },
+    "goldens/labs_per_year/lab01/terrame.log": {
+      "sha256": "402f3c5d01b6a4b6f44c539a3542c16286cd5186886b258429a80cde34630c5b",
+      "size_bytes": 2285,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab01/terrame.log"
+    },
+    "goldens/labs_per_year/lab01_md1643/lab01_md1643.csv.gz": {
+      "sha256": "4e8b82226890f95b38e92c00787c84d2ae69313b1c7ca3c760669a0572ecf694",
+      "size_bytes": 1563355,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab01_md1643/lab01_md1643.csv.gz"
+    },
+    "goldens/labs_per_year/lab01_md1643/manifest.json": {
+      "sha256": "b72e61139e54769df0fc63bce464d8e85ca8ecfdac3d21a2fd3e23ada4626f7d",
+      "size_bytes": 1406,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab01_md1643/manifest.json"
+    },
+    "goldens/labs_per_year/lab01_md1643/terrame.log": {
+      "sha256": "5844b3b2d605a41c8c69ee9b4a5c534b2a48cc940f3772fc84d1424acd1f6d05",
+      "size_bytes": 12296,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab01_md1643/terrame.log"
+    },
+    "goldens/labs_per_year/lab02/lab02.csv.gz": {
+      "sha256": "5c4ba4b12fcc51c12b6416ba6df2446b41a77bfddaef534f18527c2ce386c4e8",
+      "size_bytes": 1560730,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab02/lab02.csv.gz"
+    },
+    "goldens/labs_per_year/lab02/manifest.json": {
+      "sha256": "7b2ef416dd228f315614010e3fdeae1e5f07931c733d5fc8e3465df5e7c47580",
+      "size_bytes": 1556,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab02/manifest.json"
+    },
+    "goldens/labs_per_year/lab02/terrame.log": {
+      "sha256": "d30bdd580d7421ef7f9cb12255931c1f7a3b0b7c250def3f89591fe33d16686c",
+      "size_bytes": 2272,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab02/terrame.log"
+    },
+    "goldens/labs_per_year/lab03/lab03.csv.gz": {
+      "sha256": "d31a80152ab3969f2f6ddf0d1ecf20e72816605a5d5182d109b6cb9770ef1cd9",
+      "size_bytes": 1526809,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab03/lab03.csv.gz"
+    },
+    "goldens/labs_per_year/lab03/manifest.json": {
+      "sha256": "ad6e34765079620f99185f9e1411e6d4dcf61e29bedc6ec0396dee4dba6881aa",
+      "size_bytes": 1556,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab03/manifest.json"
+    },
+    "goldens/labs_per_year/lab03/terrame.log": {
+      "sha256": "f4bbc9a456a91757f18d997bb1e42957450130d79b5a35e9a40940de461106cc",
+      "size_bytes": 4351,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab03/terrame.log"
+    },
+    "goldens/labs_per_year/lab04/lab04.csv.gz": {
+      "sha256": "5b1072cae96edf3b7bce2f93f97666fe576f3b42d7d0476b898907b6978ee93e",
+      "size_bytes": 1561008,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab04/lab04.csv.gz"
+    },
+    "goldens/labs_per_year/lab04/manifest.json": {
+      "sha256": "6de8517c9a06b2a49f9399cb655498345c14d7d6984597d744df1ef378f78747",
+      "size_bytes": 1556,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab04/manifest.json"
+    },
+    "goldens/labs_per_year/lab04/terrame.log": {
+      "sha256": "e11b040fd48cb13a98f38cb9c2a9b9fd2151d87ebf5d9e236092933d3480e12d",
+      "size_bytes": 2631,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab04/terrame.log"
+    },
+    "goldens/labs_per_year/lab05/lab05.csv.gz": {
+      "sha256": "8c7431ea9cb1b9bfd1de808e54f3eb2b777b0a03e6bd48e32257fe953d671d12",
+      "size_bytes": 1560837,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab05/lab05.csv.gz"
+    },
+    "goldens/labs_per_year/lab05/manifest.json": {
+      "sha256": "a4ee72c5c55c2dc6c7aa9f6da83ddd5cd554ecb9b95df7a2363bdaa0ecc5775f",
+      "size_bytes": 1556,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab05/manifest.json"
+    },
+    "goldens/labs_per_year/lab05/terrame.log": {
+      "sha256": "fcec26aff96d72f9a64d34de7a0c19f59de1e84d351fe186455e3560b5223831",
+      "size_bytes": 2717,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab05/terrame.log"
+    },
+    "goldens/labs_per_year/lab06/lab06.csv.gz": {
+      "sha256": "84a9b6d4b5a36d287c9250e7c923293752ec265d1965d61d505ab1df46be061c",
+      "size_bytes": 1527833,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab06/lab06.csv.gz"
+    },
+    "goldens/labs_per_year/lab06/manifest.json": {
+      "sha256": "88bd7c8bb4131f49a1d2da775340d82e61153bc59ddec9708ecd274b1a55186f",
+      "size_bytes": 1556,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab06/manifest.json"
+    },
+    "goldens/labs_per_year/lab06/terrame.log": {
+      "sha256": "27723b7e2e1bc65cb84d23b8bd50be7f8fff95b277f7d5867a4c6fad30274e59",
+      "size_bytes": 4400,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab06/terrame.log"
+    },
+    "goldens/labs_per_year/lab07/lab07.csv.gz": {
+      "sha256": "9a5bfc16149149b9dd08cafcafa8ffa6a7ddfd8c73e725f1fa07a9702b381c6a",
+      "size_bytes": 4192135,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab07/lab07.csv.gz"
+    },
+    "goldens/labs_per_year/lab07/manifest.json": {
+      "sha256": "924fb47033a1569d9bf16d064363d45087dea8f6b8cc38dd5a2632c17a89bd32",
+      "size_bytes": 1722,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab07/manifest.json"
+    },
+    "goldens/labs_per_year/lab07/terrame.log": {
+      "sha256": "400f53e926154d70b2102a4e033e6187bf75fc6148102331f816fe812afea0b1",
+      "size_bytes": 5610,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab07/terrame.log"
+    },
+    "goldens/labs_per_year/lab08/lab08.csv.gz": {
+      "sha256": "9eb4323b03a797ca25fd56878d282c63ac21b5a071b5519294bbecb78da9ef19",
+      "size_bytes": 1520160,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab08/lab08.csv.gz"
+    },
+    "goldens/labs_per_year/lab08/manifest.json": {
+      "sha256": "4597bf5bc0dd2a8a19487ec14dffb350ec3af7a6ad064702fd5c898fa5327281",
+      "size_bytes": 1556,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab08/manifest.json"
+    },
+    "goldens/labs_per_year/lab08/terrame.log": {
+      "sha256": "7b2fb52a6b319ea65f96de6a263de88e6f0b5d2b0b14305c4130e1635f022570",
+      "size_bytes": 2273,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab08/terrame.log"
+    },
+    "goldens/labs_per_year/lab09/lab09.csv.gz": {
+      "sha256": "d2a0e996b10a8297e034ad94b9c24532f3d03445cd6e8c0266d7b1e4dbf87160",
+      "size_bytes": 1086405,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab09/lab09.csv.gz"
+    },
+    "goldens/labs_per_year/lab09/manifest.json": {
+      "sha256": "05c4690b99aaf54d6dfc2845d6eb3570096ef31a4d927d6e62c2d6c1a789648c",
+      "size_bytes": 1556,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab09/manifest.json"
+    },
+    "goldens/labs_per_year/lab09/terrame.log": {
+      "sha256": "25ba1186523f86340c1984a48be8972fde0fb0a23141ab82c492f4d5ae562d38",
+      "size_bytes": 10092,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab09/terrame.log"
+    },
+    "goldens/labs_per_year/lab10/lab10.csv.gz": {
+      "sha256": "564f6a997b541017e74f516d3dd39ba9854d8b4258617a26b93e7b317e7bdd45",
+      "size_bytes": 199069,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab10/lab10.csv.gz"
+    },
+    "goldens/labs_per_year/lab10/manifest.json": {
+      "sha256": "9800b3b1f81a497de3ae2e61183f200c66dd66460359659d76d675ab1da45d35",
+      "size_bytes": 1531,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab10/manifest.json"
+    },
+    "goldens/labs_per_year/lab10/terrame.log": {
+      "sha256": "be65c1eb39638a553312599370992e7cc58240e7f404452507bd10241b45d24b",
+      "size_bytes": 3612,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab10/terrame.log"
+    },
+    "goldens/labs_per_year/lab11/lab11.csv.gz": {
+      "sha256": "74ccd689addfbb434cd1e1d3bc399fd45c1d2567cec925b70387480bbc4e672b",
+      "size_bytes": 566704,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab11/lab11.csv.gz"
+    },
+    "goldens/labs_per_year/lab11/manifest.json": {
+      "sha256": "9729ef2ca7f35306317aed8cb2e3e4e68c711b4b205ff15b20439b6569d0fc72",
+      "size_bytes": 1531,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab11/manifest.json"
+    },
+    "goldens/labs_per_year/lab11/terrame.log": {
+      "sha256": "07d30ce7a1682244f11101025700f7a5e5c13d5879f57d0d60e94e161db9b48a",
+      "size_bytes": 3612,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab11/terrame.log"
+    },
+    "goldens/labs_per_year/lab12/lab12.csv.gz": {
+      "sha256": "17be96448c08cc1054e28ad319e03ee791e41f0e45bad89605d847de3b4efb99",
+      "size_bytes": 725099,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab12/lab12.csv.gz"
+    },
+    "goldens/labs_per_year/lab12/manifest.json": {
+      "sha256": "a72604378a3d5ad73de3dc10e8fa3af737c21b01e62de4ea05de9a9fee2b1fed",
+      "size_bytes": 1531,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab12/manifest.json"
+    },
+    "goldens/labs_per_year/lab12/terrame.log": {
+      "sha256": "5ac9789e44750f756d63f8ccb5f20c204025f237d676697d36190ed86b053124",
+      "size_bytes": 3612,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab12/terrame.log"
+    },
+    "goldens/labs_per_year/lab13/lab13.csv.gz": {
+      "sha256": "a65c5be9f8a16e047e04131ffbc6707887e82c48730afcdfc30bcee430b661ea",
+      "size_bytes": 722331,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab13/lab13.csv.gz"
+    },
+    "goldens/labs_per_year/lab13/manifest.json": {
+      "sha256": "58f3a5535466f0698ba400b7695cf0a7168462da6e07d90170912b38ac2f148b",
+      "size_bytes": 1531,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab13/manifest.json"
+    },
+    "goldens/labs_per_year/lab13/terrame.log": {
+      "sha256": "7accc13778d94bafad21e5a0b89f97141c2754c415a59fc2b073df86ef0fb759",
+      "size_bytes": 3612,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab13/terrame.log"
+    },
+    "goldens/labs_per_year/lab14/lab14.csv.gz": {
+      "sha256": "e0b64a32a7125cf15bd43f12fcb301ec4e5a3743d5140d3cee815c59abfed29f",
+      "size_bytes": 711944,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab14/lab14.csv.gz"
+    },
+    "goldens/labs_per_year/lab14/manifest.json": {
+      "sha256": "123e7d92fa4f4e41179ebd9c7dec3db64b30f6b8270ee094fe0cf35c643e7bc1",
+      "size_bytes": 1513,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab14/manifest.json"
+    },
+    "goldens/labs_per_year/lab14/terrame.log": {
+      "sha256": "d1506723feb17201788275728bf5aa6ec1e376b3f9992dcc04094d5662264230",
+      "size_bytes": 3898,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab14/terrame.log"
+    },
+    "goldens/labs_per_year/lab15/lab15.csv.gz": {
+      "sha256": "0ac581cc89eb7d04b6e57c2f8ed9657833512eef64b9eef07ac4c380eb2b40c7",
+      "size_bytes": 722550,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab15/lab15.csv.gz"
+    },
+    "goldens/labs_per_year/lab15/manifest.json": {
+      "sha256": "8f92e4180eb5925b78e61b1a49ccdf35b82558d5c02e0ce1a11166b9bcd0411b",
+      "size_bytes": 1513,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab15/manifest.json"
+    },
+    "goldens/labs_per_year/lab15/terrame.log": {
+      "sha256": "00909ea2eaa8fe88c302dd0b0b8d871b79b478e946cad130d6dd347085ee8cd7",
+      "size_bytes": 3897,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab15/terrame.log"
+    },
+    "goldens/labs_per_year/lab15_md10/lab15_md10.csv.gz": {
+      "sha256": "a549e1680fef0e4c0e29697c63c4cc63b1ee5539edc53ad914b30456630a65fa",
+      "size_bytes": 722784,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab15_md10/lab15_md10.csv.gz"
+    },
+    "goldens/labs_per_year/lab15_md10/manifest.json": {
+      "sha256": "02fdaba332041bd6b65c83179c740b980d8500a7083c03e5ef88640c53ce137b",
+      "size_bytes": 1376,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab15_md10/manifest.json"
+    },
+    "goldens/labs_per_year/lab15_md10/terrame.log": {
+      "sha256": "6a0e4cbdf3bb7c7decd3cbb5414e57db7cea86788bcc7ff074077f42010fb032",
+      "size_bytes": 48679,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab15_md10/terrame.log"
+    },
+    "goldens/labs_per_year/lab16/lab16.csv.gz": {
+      "sha256": "0ac581cc89eb7d04b6e57c2f8ed9657833512eef64b9eef07ac4c380eb2b40c7",
+      "size_bytes": 722550,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab16/lab16.csv.gz"
+    },
+    "goldens/labs_per_year/lab16/manifest.json": {
+      "sha256": "3b232d7fbeb03a811e1f207a19d9f9a72a2cdadbca8e23bd90bc3d7ef77a9383",
+      "size_bytes": 1513,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab16/manifest.json"
+    },
+    "goldens/labs_per_year/lab16/terrame.log": {
+      "sha256": "e94ca4bdfacc8ed9a9c1f8514e6b01f22103ffcab6d106348d4d766224fd253a",
+      "size_bytes": 4136,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab16/terrame.log"
+    },
+    "goldens/labs_per_year/lab17/lab17.csv.gz": {
+      "sha256": "0ac581cc89eb7d04b6e57c2f8ed9657833512eef64b9eef07ac4c380eb2b40c7",
+      "size_bytes": 722550,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab17/lab17.csv.gz"
+    },
+    "goldens/labs_per_year/lab17/manifest.json": {
+      "sha256": "06cb81ed35445ee6bf114d35455907db48fa1561664e5558fc7b47693ae38913",
+      "size_bytes": 1513,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab17/manifest.json"
+    },
+    "goldens/labs_per_year/lab17/terrame.log": {
+      "sha256": "0579bb72144cddb6850605c848181a51d27f396aaa1de818a59d122f4e811465",
+      "size_bytes": 4196,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab17/terrame.log"
+    },
+    "goldens/labs_per_year/lab18/lab18.csv.gz": {
+      "sha256": "85991d95d90443202ef876ce2bbd51da7d911bd47da8e145c08bee4db848151d",
+      "size_bytes": 733345,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab18/lab18.csv.gz"
+    },
+    "goldens/labs_per_year/lab18/manifest.json": {
+      "sha256": "b46b711a41566ed2793ddc0ce146ee502640217bc2e29b0386ca2b8c0126729b",
+      "size_bytes": 1513,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab18/manifest.json"
+    },
+    "goldens/labs_per_year/lab18/terrame.log": {
+      "sha256": "2349217ba9e34db60953d297a9c9129256ea8c7f50ab00e3380e16d75f87a7a6",
+      "size_bytes": 8338,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab18/terrame.log"
+    },
+    "goldens/labs_per_year/lab19/lab19.csv.gz": {
+      "sha256": "aa81771559aa42c0dc2e5f902533d3835d513ab051e06bb176cf019aba249688",
+      "size_bytes": 735492,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab19/lab19.csv.gz"
+    },
+    "goldens/labs_per_year/lab19/manifest.json": {
+      "sha256": "c43d5e853df3a451dd41326a7e2c0edf9205fa781849d9e0ebc73fca0416d61c",
+      "size_bytes": 1513,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab19/manifest.json"
+    },
+    "goldens/labs_per_year/lab19/terrame.log": {
+      "sha256": "1717fcd2dba92a5cb5eb50dd21242900da664c7544667a1128815b619492bce4",
+      "size_bytes": 4262,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab19/terrame.log"
+    },
+    "goldens/labs_per_year/lab20/lab20.csv.gz": {
+      "sha256": "e81d7d597b18553653b65c5cd8a83227bad008fa7c802a039079b4c87fad99ad",
+      "size_bytes": 734376,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab20/lab20.csv.gz"
+    },
+    "goldens/labs_per_year/lab20/manifest.json": {
+      "sha256": "06397670dd481e2a7380c245eb6380f142fbb2d3bb44c26fd8cb75cab7f6d0bc",
+      "size_bytes": 1513,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab20/manifest.json"
+    },
+    "goldens/labs_per_year/lab20/terrame.log": {
+      "sha256": "451de396ab08c3e9550a6951823cc9d134c081731943f237c9099df07bfa59dc",
+      "size_bytes": 4136,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab20/terrame.log"
+    },
+    "goldens/labs_per_year/lab21/lab21.csv.gz": {
+      "sha256": "5436043dd24706ffdb0a2618efeac4de0e85f9d8d231d23149302e0182b644c7",
+      "size_bytes": 721793,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab21/lab21.csv.gz"
+    },
+    "goldens/labs_per_year/lab21/manifest.json": {
+      "sha256": "361a2e8047548a9b1ab777e1dbc914e11c94d65268640fbcc5a6f793ce847eb2",
+      "size_bytes": 1513,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab21/manifest.json"
+    },
+    "goldens/labs_per_year/lab21/terrame.log": {
+      "sha256": "1536880c59357fd81e112e1c5077e53ad1e007325f55b1a9f2d073351f044c16",
+      "size_bytes": 4021,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/labs_per_year/lab21/terrame.log"
+    },
+    "goldens/timing/environment.json": {
+      "sha256": "ed8e5b0c06f713418e77acc7f6a6dd330ff160605ed5e54e969902b818104d64",
+      "size_bytes": 550,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/timing/environment.json"
+    },
+    "goldens/timing/raw/connectivity_terrame_timing.csv": {
+      "sha256": "8d7b7717a9a657cba6376297ba1e32e157def49fa7f35b751e91dd4746cc082d",
+      "size_bytes": 185,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/timing/raw/connectivity_terrame_timing.csv"
+    },
+    "goldens/timing/raw/itaituba_terrame_timing.csv": {
+      "sha256": "3e38943361bddf6a845b2c626142de3f0dd6696fd1f0a097ae9022bc36df77e2",
+      "size_bytes": 185,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/timing/raw/itaituba_terrame_timing.csv"
+    },
+    "goldens/timing/timing_terrame.json": {
+      "sha256": "a89a44ffadf1348a88ee79f7795854045b4fa71a57e53898f2a5bc21279f4b3f",
+      "size_bytes": 534,
+      "url": "https://raw.githubusercontent.com/LambdaGeo/luccme-goldens/v1.1.0/goldens/timing/timing_terrame.json"
+    }
+  }
+}
