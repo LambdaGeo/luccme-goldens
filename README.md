@@ -1,6 +1,6 @@
 # luccme-goldens
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23107748.svg)](https://doi.org/10.5281/zenodo.23107748)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23161342.svg)](https://doi.org/10.5281/zenodo.23161342)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Docker Image](https://img.shields.io/badge/Docker-profsergiocosta%2Fterrame--luccme-blue)](https://hub.docker.com/r/profsergiocosta/terrame-luccme)
 [![Open Science](https://img.shields.io/badge/Open%20Science-Reproducible%20Goldens-green.svg)](#)
@@ -16,7 +16,7 @@ This repository serves as the **Level 1 (Reference Goldens)** foundation for rep
 In environmental simulation science, proving that a newly engineered model (`disslucc` / `disscube`) faithfully replicates a legacy system (`TerraME` / `LuccME`) requires strict numerical parity against immutable reference outputs ("goldens").
 
 Because TerraME 2.0.1 depends on a legacy Ubuntu 18.04 runtime, running the original model scripts on modern operating systems can be difficult. This repository solves that challenge through a dual approach:
-1. **Pre-computed, Verifiable Goldens (No Re-run Needed):** Every reference CSV and baseline dataset is pre-computed, versioned, hashed with SHA-256, and published as a GitHub Release asset (and archived on Zenodo with DOI: [10.5281/zenodo.23107748](https://doi.org/10.5281/zenodo.23107748)). Downstream projects ingest them in seconds via `Pooch`.
+1. **Pre-computed, Verifiable Goldens (No Re-run Needed):** Every reference CSV and baseline dataset is pre-computed, versioned, hashed with SHA-256, and published as a GitHub Release asset (and archived on Zenodo with DOI: [10.5281/zenodo.23161342](https://doi.org/10.5281/zenodo.23161342)). Downstream projects ingest them in seconds via `Pooch`.
 2. **Reproducible Generation Harness:** A turnkey Dockerized harness (`profsergiocosta/terrame-luccme`) enables independent peer reviewers to execute all legacy scripts and re-verify every SHA-256 hash from scratch.
 
 ---
@@ -258,20 +258,20 @@ If you use these reference goldens in scientific research, please cite:
 
 **APA:**
 
-> Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23107748
+> Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23161342
 
 **BibTeX:**
 
 ```bibtex
-@software{costa_2026_23107748,
+@software{costa_2026_23161342,
   author       = {Costa, S{\'e}rgio Souza},
   title        = {luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1},
   month        = oct,
   year         = 2026,
   publisher    = {Zenodo},
   version      = {v1.0.0},
-  doi          = {10.5281/zenodo.23107748},
-  url          = {[https://doi.org/10.5281/zenodo.23107748](https://doi.org/10.5281/zenodo.23107748)}
+  doi          = {10.5281/zenodo.23161342},
+  url          = {[https://doi.org/10.5281/zenodo.23161342](https://doi.org/10.5281/zenodo.23161342)}
 }
 
 ```
