@@ -7,6 +7,12 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 RELEASE_DIR="$ROOT_DIR/release"
 VERSION="${VERSION:-v1.1.0}"
+# Image used to generate the goldens; prefer a digest (repo@sha256:...) so it is verifiable
+DOCKER_IMAGE="${DOCKER_IMAGE:-profsergiocosta/terrame-luccme}"
+case "$DOCKER_IMAGE" in
+    *@sha256:*) ;;
+    *) echo "Warning: DOCKER_IMAGE has no digest (@sha256:...); manifest.json will not pin the exact image." >&2 ;;
+esac
 ZIP_NAME="luccme-goldens-${VERSION}.zip"
 CHECKSUMS_FILE="$ROOT_DIR/checksums.sha256"
 MANIFEST_FILE="$ROOT_DIR/manifest.json"
@@ -22,7 +28,7 @@ cd "$ROOT_DIR"
 # 1. Compute SHA-256 for all goldens
 echo "==> Computing SHA-256 checksums..."
 rm -f "$CHECKSUMS_FILE"
-find goldens/ -type f \( -name "*.csv" -o -name "*.csv.gz" -o -name "*.shp" -o -name "*.dbf" -o -name "*.tif" \) | sort | while read -r f; do
+find goldens/ -type f \( -name "*.csv" -o -name "*.csv.gz" -o -name "*.shp" -o -name "*.dbf" -o -name "*.tif" -o -path "goldens/timing/*.json" \) | sort | while read -r f; do
     sha256sum "$f" >> "$CHECKSUMS_FILE"
 done
 cat "$CHECKSUMS_FILE"
@@ -33,8 +39,13 @@ python3 -c "
 import json, hashlib, os, glob, zipfile
 
 files_info = []
+
+def is_run_log(path):
+    # Execution logs of the final-state labs are run artifacts (not goldens): never packaged
+    return path.replace(os.sep, '/').startswith('goldens/labs/') and path.endswith('.log')
+
 for f in sorted(glob.glob('goldens/**/*.*', recursive=True)):
-    if os.path.isfile(f) and not f.endswith('.sha256'):
+    if os.path.isfile(f) and not f.endswith('.sha256') and not is_run_log(f):
         with open(f, 'rb') as fp:
             digest = hashlib.sha256(fp.read()).hexdigest()
         size = os.path.getsize(f)
@@ -48,7 +59,7 @@ manifest = {
     'name': 'luccme-goldens',
     'version': '$VERSION',
     'generator': 'TerraME 2.0.1 + LuccME 3.1 in Docker (Ubuntu 18.04)',
-    'docker_image': 'profsergiocosta/terrame-luccme',
+    'docker_image': '$DOCKER_IMAGE',
     'description': 'Canonical reference execution outputs (goldens) for LuccME simulation models and TerraME GIS fill operations.',
     'files': files_info
 }
@@ -67,6 +78,8 @@ with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as z:
         for root, dirs, files in os.walk(folder):
             for file in files:
                 full_path = os.path.join(root, file)
+                if is_run_log(full_path):
+                    continue
                 z.write(full_path)
 
 print(f'Created {zip_path} ({os.path.getsize(zip_path):,} bytes)')

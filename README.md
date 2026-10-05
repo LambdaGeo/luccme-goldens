@@ -77,6 +77,15 @@ make compare-per-year NEW=goldens/labs_per_year/lab15/lab15.csv.gz REF=other/lab
 
 The files released with each version are listed in `manifest.json`.
 
+## Numerical reproducibility
+
+All 21 labs and their 2 variants (`lab01_md1643`, `lab15_md10`) were regenerated with the image
+above and compared with the v1.0.0 goldens: every file matched within a maximum absolute
+difference of 1e-12. On the same host, `lab01` is not bit-for-bit deterministic: in 8 consecutive
+runs the output differed by at most 1e-12 (one unit of the 12th decimal place), producing several
+distinct file hashes. File hashes therefore identify one frozen run; **verify with a numerical
+tolerance (1e-9) rather than by hash** (see `python3 scripts/lab_per_year.py compare`).
+
 ### Suite B: TerraME GIS Fill Cellular Space (`sources/fill/` → `goldens/fill/`)
 Validates spatial aggregation and feature extraction on cellular grids against TerraME's `cl:fill{}`:
 
@@ -124,6 +133,14 @@ If you wish to re-execute the legacy TerraME models and regenerate all golden ou
 * Docker engine installed and running.
 
 ### 1. Pull the Docker Appliance
+
+The goldens in this release were generated with `profsergiocosta/terrame-luccme` **0.4.2**
+(TerraME 2.0.1, LuccME 3.1, GNU `time`), pinned by digest:
+
+    profsergiocosta/terrame-luccme@sha256:e0f46a7faed8a601c2ca10f3ba0dcebb352b13b8361e40d6580a0a034c21fb2c
+
+Source of the image (Dockerfile): https://github.com/profsergiocosta/terrame-docker,
+archived at https://doi.org/10.5281/zenodo.23160784.
 
 ```bash
 make docker-pull
@@ -191,7 +208,7 @@ Each run automatically generates:
 ### 4. Build Release Package and Checksums
 
 ```bash
-make package
+make package DOCKER_IMAGE=repo@sha256:<DIGEST>
 
 ```
 
@@ -263,3 +280,46 @@ Upstream TerraME and LuccME frameworks are Copyright (C) 2001–2017 INPE and Te
 
 ```
 
+
+---
+
+## Timing measurements and benchmark pins
+
+### TerraME time and memory (fill cases)
+
+Timing is a **frozen measurement**, not a regenerable golden: it varies from run to run, so the
+SHA-256 of `goldens/timing/*` identifies one specific measurement made on the machine described in
+`environment.json`. It is reported for context only and is never a pass/fail criterion.
+
+```bash
+# 1. Image pinned by digest, with GNU time (profsergiocosta/terrame-luccme >= 0.4.2)
+#    docker image inspect --format '{{index .RepoDigests 0}}' profsergiocosta/terrame-luccme:0.4.2
+# 2. Measure (rep 0 is a warm-up and is excluded from the summary)
+make timing FILL=connectivity REPS=5
+make timing FILL=itaituba REPS=5      # or FILL=all
+# 3. Environment record + summary (median, min, max, peak memory)
+make timing-report
+```
+
+Time is measured inside the container around the `terrame` command only (`docker run` and Xvfb
+start-up are not counted), with `--cpus=1 --memory=4g` (override with `CPUS=` / `MEM=`). Use the
+same limits when timing DisSCube so the comparison is fair.
+
+Outputs: `goldens/timing/raw/<dataset>_terrame_timing.csv`, `goldens/timing/timing_terrame.json`,
+`goldens/timing/environment.json`.
+
+### Updating the hashes pinned by the benchmarks
+
+After committing (and tagging) the goldens, export the pins and update the benchmark in one step:
+
+```bash
+make package VERSION=v1.1.0 DOCKER_IMAGE=$IMG     # manifest.json + checksums.sha256 + release ZIP
+git add -A && git commit -m "Release v1.1.0" && git tag v1.1.0 && git push --follow-tags
+make pins REF=v1.1.0 DOI=10.5281/zenodo.NNNNNNN BENCH=../disscube-benchmark
+```
+
+`make pins` writes `benchmark_pins.json` (SHA-256, size and immutable raw URL for every tracked file
+under `goldens/`) and rewrites `reference_url` / `reference_sha256` in each
+`benchmarks/terrame_fill/<dataset>.compare.toml`. It refuses to run if a file differs from the
+given ref, so a pinned URL can never point to different bytes than the pinned hash. Without `BENCH`
+it only writes `benchmark_pins.json`.

@@ -29,6 +29,15 @@ import numpy as np
 import pandas as pd
 
 HERE = Path(__file__).resolve().parent
+
+
+def _repo_relative(path):
+    """Repo-relative POSIX path, so manifests do not leak the author's absolute paths."""
+    p = Path(path).resolve()
+    try:
+        return p.relative_to(HERE.parent).as_posix()
+    except ValueError:
+        return p.name
 SNAPSHOT_LUA = HERE / "per_year_snapshot.lua"
 
 ID_COLUMNS = ("id", "object_id_", "object_id0")
@@ -188,7 +197,7 @@ def cmd_consolidate(a: argparse.Namespace) -> None:
         "name": a.name,
         "variant_of": a.name.split("_md")[0] if overrides else None,
         "overrides": overrides,
-        "source": {"script": a.source, "sha256": sha256_file(Path(a.source))},
+        "source": {"script": _repo_relative(a.source), "sha256": sha256_file(Path(a.source))},
         "engine": {"image": a.image, "terrame": "2.0.1", "luccme": "3.1"},
         "generator": {
             "script": "scripts/lab_per_year.py",

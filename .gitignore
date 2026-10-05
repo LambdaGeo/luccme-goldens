@@ -8,3 +8,5 @@ goldens/**/*.cpg
 goldens/**/*.qix
 release/*.zip
 __pycache__/
+# Execution logs of the final-state labs (run artifacts)
+goldens/labs/*.log

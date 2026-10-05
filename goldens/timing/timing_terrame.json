@@ -1,0 +1,26 @@
+{
+  "engine": "TerraME 2.0.1 (cl:fill{})",
+  "warmup": "rep 0 excluded",
+  "datasets": {
+    "connectivity": {
+      "reps": 5,
+      "wall_s": {
+        "median": 11.22,
+        "min": 10.04,
+        "max": 13.75
+      },
+      "max_rss_mb": 335.1,
+      "raw_file": "raw/connectivity_terrame_timing.csv"
+    },
+    "itaituba": {
+      "reps": 5,
+      "wall_s": {
+        "median": 12.65,
+        "min": 11.32,
+        "max": 14.74
+      },
+      "max_rss_mb": 156.5,
+      "raw_file": "raw/itaituba_terrame_timing.csv"
+    }
+  }
+}

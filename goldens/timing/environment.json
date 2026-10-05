@@ -1,0 +1,15 @@
+{
+  "measured_at_utc": "2026-10-05T11:45:13+00:00",
+  "image": "profsergiocosta/terrame-luccme@sha256:e0f46a7faed8a601c2ca10f3ba0dcebb352b13b8361e40d6580a0a034c21fb2c",
+  "image_digest": "profsergiocosta/terrame-luccme@sha256:e0f46a7faed8a601c2ca10f3ba0dcebb352b13b8361e40d6580a0a034c21fb2c",
+  "docker_version": "29.1.2",
+  "cpu_model": "Intel(R) Core(TM) i7-7700T CPU @ 2.90GHz",
+  "host_cores": 8,
+  "host_ram_mb": 15851,
+  "container_limits": {
+    "cpus": "1",
+    "memory": "4g"
+  },
+  "kernel": "7.0.0-14-generic",
+  "os": "Linux Mint 22.2"
+}
