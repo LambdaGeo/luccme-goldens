@@ -1,7 +1,7 @@
 # luccme-goldens
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23161342.svg)](https://doi.org/10.5281/zenodo.23161342)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT + LGPL-3.0 + CC BY 4.0](https://img.shields.io/badge/License-MIT%20%7C%20LGPL--3.0%20%7C%20CC%20BY%204.0-blue.svg)](THIRD_PARTY.md)
 [![Docker Image](https://img.shields.io/badge/Docker-profsergiocosta%2Fterrame--luccme-blue)](https://hub.docker.com/r/profsergiocosta/terrame-luccme)
 [![Open Science](https://img.shields.io/badge/Open%20Science-Reproducible%20Goldens-green.svg)](#)
 
@@ -223,7 +223,8 @@ luccme-goldens/
 ├── Makefile                       # Main entry point: run-labs, run-fill, package
 ├── README.md                      # Comprehensive documentation and catalog
 ├── CITATION.cff                   # Citation metadata (Zenodo / GitHub integration)
-├── LICENSE                        # MIT and LGPL-3.0 attribution
+├── LICENSE                        # MIT (our code) + summary of the other licences
+├── THIRD_PARTY.md                 # Origin, fixed commit and licence of every directory
 ├── checksums.sha256               # SHA-256 cryptographic hashes of all goldens
 ├── manifest.json                  # Machine-readable artifact manifest
 │
@@ -258,7 +259,7 @@ If you use these reference goldens in scientific research, please cite:
 
 **APA:**
 
-> Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23161342
+> Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23161342
 
 **BibTeX:**
 
@@ -269,14 +270,14 @@ If you use these reference goldens in scientific research, please cite:
   month        = oct,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v1.0.0},
+  version      = {v1.2.0},
   doi          = {10.5281/zenodo.23161342},
   url          = {[https://doi.org/10.5281/zenodo.23161342](https://doi.org/10.5281/zenodo.23161342)}
 }
 
 ```
 
-Upstream TerraME and LuccME frameworks are Copyright (C) 2001–2017 INPE and TerraLAB/UFOP.
+Upstream TerraME and LuccME frameworks are Copyright (C) INPE and TerraLAB/UFOP (LGPL). Origin, commits and licences: [THIRD_PARTY.md](THIRD_PARTY.md).
 
 ```
 
