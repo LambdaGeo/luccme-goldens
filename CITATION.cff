@@ -12,7 +12,7 @@ references:
     doi: 10.5281/zenodo.23160784
     repository-code: "https://github.com/profsergiocosta/terrame-docker"
 license: MIT
-doi: "10.5281/zenodo.23161342"
+# doi: added after the Zenodo record of v1.2.0 exists (10.5281/zenodo.23161342 is v1.1.0)
 url: "https://github.com/LambdaGeo/luccme-goldens"
 repository-code: "https://github.com/LambdaGeo/luccme-goldens"
 keywords:

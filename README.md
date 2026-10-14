@@ -259,7 +259,7 @@ If you use these reference goldens in scientific research, please cite:
 
 **APA:**
 
-> Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23161342
+> Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23161342
 
 **BibTeX:**
 
@@ -270,7 +270,7 @@ If you use these reference goldens in scientific research, please cite:
   month        = oct,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v1.2.0},
+  version      = {v1.1.0},
   doi          = {10.5281/zenodo.23161342},
   url          = {[https://doi.org/10.5281/zenodo.23161342](https://doi.org/10.5281/zenodo.23161342)}
 }
