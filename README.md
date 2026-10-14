@@ -1,6 +1,6 @@
 # luccme-goldens
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23161342.svg)](https://doi.org/10.5281/zenodo.23161342)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23366244.svg)](https://doi.org/10.5281/zenodo.23366244)
 [![License: MIT + LGPL-3.0 + CC BY 4.0](https://img.shields.io/badge/License-MIT%20%7C%20LGPL--3.0%20%7C%20CC%20BY%204.0-blue.svg)](THIRD_PARTY.md)
 [![Docker Image](https://img.shields.io/badge/Docker-profsergiocosta%2Fterrame--luccme-blue)](https://hub.docker.com/r/profsergiocosta/terrame-luccme)
 [![Open Science](https://img.shields.io/badge/Open%20Science-Reproducible%20Goldens-green.svg)](#)
@@ -16,7 +16,7 @@ This repository serves as the **Level 1 (Reference Goldens)** foundation for rep
 In environmental simulation science, proving that a newly engineered model (`disslucc` / `disscube`) faithfully replicates a legacy system (`TerraME` / `LuccME`) requires strict numerical parity against immutable reference outputs ("goldens").
 
 Because TerraME 2.0.1 depends on a legacy Ubuntu 18.04 runtime, running the original model scripts on modern operating systems can be difficult. This repository solves that challenge through a dual approach:
-1. **Pre-computed, Verifiable Goldens (No Re-run Needed):** Every reference CSV and baseline dataset is pre-computed, versioned, hashed with SHA-256, and published as a GitHub Release asset (and archived on Zenodo with DOI: [10.5281/zenodo.23161342](https://doi.org/10.5281/zenodo.23161342)). Downstream projects ingest them in seconds via `Pooch`.
+1. **Pre-computed, Verifiable Goldens (No Re-run Needed):** Every reference CSV and baseline dataset is pre-computed, versioned, hashed with SHA-256, and published as a GitHub Release asset (and archived on Zenodo with DOI: [10.5281/zenodo.23366244](https://doi.org/10.5281/zenodo.23366244)). Downstream projects ingest them in seconds via `Pooch`.
 2. **Reproducible Generation Harness:** A turnkey Dockerized harness (`profsergiocosta/terrame-luccme`) enables independent peer reviewers to execute all legacy scripts and re-verify every SHA-256 hash from scratch.
 
 ---
@@ -259,20 +259,20 @@ If you use these reference goldens in scientific research, please cite:
 
 **APA:**
 
-> Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.1.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23161342
+> Costa, S. S. (2026). *luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1* (Version v1.2.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.23366244
 
 **BibTeX:**
 
 ```bibtex
-@software{costa_2026_23161342,
+@software{costa_2026_23366244,
   author       = {Costa, S{\'e}rgio Souza},
   title        = {luccme-goldens: Canonical Reference Execution Outputs for TerraME 2.0.1 and LuccME 3.1},
   month        = oct,
   year         = 2026,
   publisher    = {Zenodo},
-  version      = {v1.1.0},
-  doi          = {10.5281/zenodo.23161342},
-  url          = {[https://doi.org/10.5281/zenodo.23161342](https://doi.org/10.5281/zenodo.23161342)}
+  version      = {v1.2.0},
+  doi          = {10.5281/zenodo.23366244},
+  url          = {[https://doi.org/10.5281/zenodo.23366244](https://doi.org/10.5281/zenodo.23366244)}
 }
 
 ```
