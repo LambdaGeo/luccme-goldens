@@ -22,8 +22,12 @@ SOFTWARE.
 
 ---
 
-Upstream Software and Data Attribution:
-- TerraME is Copyright (C) 2001-2017 INPE and TerraLAB/UFOP (GNU LGPL 2.1 / 3.0).
-- LuccME is Copyright (C) INPE and TerraLAB/UFOP (GNU LGPL 3.0).
-Upstream source files in sources/ are redistributed under their original LGPL terms.
-Generated reference CSVs in goldens/ are public research data (Creative Commons CC-BY-4.0).
+Third-party material and the licences that apply to each directory are listed in THIRD_PARTY.md.
+
+Summary:
+- Our code (scripts/, Makefile, release/, two parity cases and the sample model in sources/): MIT, above.
+- Upstream LuccME and TerraME files in sources/ (scripts and the cell layers in sources/labs/data/):
+  redistributed unchanged under their original licence, GNU LGPL 3.0
+  (LuccME: Copyright (C) 2009-2019 INPE, CCST; TerraME: Copyright (C) 2001-2017 INPE and TerraLAB/UFOP).
+- Generated reference CSVs in goldens/: our selection, hashes and timing are CC-BY-4.0; the input values they
+  carry from upstream layers stay under the upstream licence.
