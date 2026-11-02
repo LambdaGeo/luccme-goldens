@@ -28,27 +28,31 @@ Covers the official functional test suite of LuccME 3.1 across continuous and di
 
 | Lab | Model Paradigm | Components Used | Study Area & Data |
 | :--- | :--- | :--- | :--- |
-| **Lab01** | Continuous | `DemandPreComputed` + `PotentialCLinearRegression` + `AllocationCClueLike` | Acre (`csAC.shp`, 25 km) |
-| **Lab02** | Continuous | `DemandPreComputed` + `PotentialCSpatialLagRegression` + `AllocationCClueLike` | Acre (`csAC.shp`, 25 km) |
-| **Lab03** | Continuous | `DemandPreComputed` + `PotentialCSpatialLagRegression` + **`AllocationCClueLikeSaturation`** | Acre (`csAC.shp`, 25 km) |
-| **Lab04** | Continuous | `DemandComputeTwoDates` + `PotentialCSpatialLagRegression` + `AllocationCClueLike` | Acre (`csAC.shp`, 25 km) |
-| **Lab05** | Continuous | `DemandComputeThreeDates` + `PotentialCSpatialLagRegression` + `AllocationCClueLike` | Acre (`csAC.shp`, 25 km) |
+| **Lab01** | Continuous | `DemandPreComputed` + `PotentialCLinearRegression` + `AllocationCClueLike` | Acre (`csAC.shp`, 5 km) |
+| **Lab02** | Continuous | `DemandPreComputed` + `PotentialCSpatialLagRegression` + `AllocationCClueLike` | Acre (`csAC.shp`, 5 km) |
+| **Lab03** | Continuous | `DemandPreComputed` + `PotentialCSpatialLagRegression` + **`AllocationCClueLikeSaturation`** | Acre (`csAC.shp`, 5 km) |
+| **Lab04** | Continuous | `DemandComputeTwoDates` + `PotentialCSpatialLagRegression` + `AllocationCClueLike` | Acre (`csAC.shp`, 5 km) |
+| **Lab05** | Continuous | `DemandComputeThreeDates` + `PotentialCSpatialLagRegression` + `AllocationCClueLike` | Acre (`csAC.shp`, 5 km) |
 | **Lab06** | Continuous | Dynamic variables update (2009) | Acre (`csAC_2009.shp`) |
 | **Lab07** | Continuous | Prospective scenario simulation (2015–2025) with dynamic updates (2020) | Acre (`csAC_cenarioA_2020.shp`) |
 | **Lab08** | Continuous | `PotentialCSpatialLagLinearRegressionMix` | Acre (`csAC.shp`) |
 | **Lab09** | Continuous | `PotentialCMaximumEntropyLike` | Acre (`csAC.shp`) |
-| **Lab10** | Discrete | `PotentialDNeighSimpleRule` + `AllocationDSimpleOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab11** | Discrete | `PotentialDInverseDistanceRule` + `AllocationDSimpleOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab12** | Discrete | `PotentialDNeighInverseDistanceRule` + `AllocationDSimpleOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab13** | Discrete | `PotentialDLogisticRegression` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab14** | Discrete | `PotentialDLogisticRegressionNeighAttract` + `AllocationDClueSLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`, 500 m) |
-| **Lab15** | Discrete | **`DemandPreComputed` + `PotentialDLogisticRegression` + `AllocationDClueSLike`** | **Mojuí dos Campos/BR-163 (Paper Case 1)** |
-| **Lab16** | Discrete | `DemandComputeTwoDates` + `PotentialDLogisticRegression` + `AllocationDClueSLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
-| **Lab17** | Discrete | `DemandComputeThreeDates` + `PotentialDLogisticRegression` + `AllocationDClueSLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
-| **Lab18** | Discrete | `PotentialDSampleBased` + `AllocationDClueSLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
-| **Lab19** | Discrete | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationDClueSNeighOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
-| **Lab20** | Mixed | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationCClueLike` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
-| **Lab21** | Discrete | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationDClueSNeighOrdering` | Mojuí dos Campos/BR-163 (`cs_moju.shp`) |
+| **Lab10** | Discrete | `PotentialDNeighSimpleRule` + `AllocationDSimpleOrdering` | PA Moju (`cs_moju.shp`, 500 m) |
+| **Lab11** | Discrete | `PotentialDInverseDistanceRule` + `AllocationDSimpleOrdering` | PA Moju (`cs_moju.shp`, 500 m) |
+| **Lab12** | Discrete | `PotentialDNeighInverseDistanceRule` + `AllocationDSimpleOrdering` | PA Moju (`cs_moju.shp`, 500 m) |
+| **Lab13** | Discrete | `PotentialDLogisticRegression` | PA Moju (`cs_moju.shp`, 500 m) |
+| **Lab14** | Discrete | `PotentialDLogisticRegressionNeighAttract` + `AllocationDClueSLike` | PA Moju (`cs_moju.shp`, 500 m) |
+| **Lab15** | Discrete | **`DemandPreComputed` + `PotentialDLogisticRegression` + `AllocationDClueSLike`** | **PA Moju (Paper Case 1)** |
+| **Lab16** | Discrete | `DemandComputeTwoDates` + `PotentialDLogisticRegression` + `AllocationDClueSLike` | PA Moju (`cs_moju.shp`) |
+| **Lab17** | Discrete | `DemandComputeThreeDates` + `PotentialDLogisticRegression` + `AllocationDClueSLike` | PA Moju (`cs_moju.shp`) |
+| **Lab18** | Discrete | `PotentialDSampleBased` + `AllocationDClueSLike` | PA Moju (`cs_moju.shp`) |
+| **Lab19** | Discrete | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationDClueSNeighOrdering` | PA Moju (`cs_moju.shp`) |
+| **Lab20** | Mixed | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationCClueLike` | PA Moju (`cs_moju.shp`) |
+| **Lab21** | Discrete | `PotentialDLogisticRegressionNeighAttractRepulsion` + `AllocationDClueSNeighOrdering` | PA Moju (`cs_moju.shp`) |
+
+**Study areas.** `csAC` covers the state of Acre with 6,574 cells of 5 km × 5 km (25 km², SAD69 / Brazil Polyconic). `cs_moju` covers the PA Moju I and II land-reform settlement, south of Santarém (Pará) and east of the BR-163 highway, with 5,914 cells of 0.0045° (about 500 m), roughly 1,480 km². The PA Moju data come from Coelho (2009), who modelled the Santarém region with CLUE-S on TerraME from Landsat maps of 1999, 2004 and 2007; the labs reduce her land-use classes to forest (`f`), deforested (`d`) and other (`o`). The area is not the municipality of Mojuí dos Campos: the town is 54 to 100 km from the cells (`dist_mojui` from 0.49° to 0.91°).
+
+> Coelho, A. S. (2009). *Modelagem de dinâmica do uso da terra e cobertura vegetal na região de Santarém, oeste do Pará* (Master's dissertation). Universidade Federal do Pará. <https://repositorio.ufpa.br/handle/2011/6828>
 
 **What `goldens/labs/` holds.** The **last year** of each lab, as saved by LuccME itself: the attributes of the cell layer (the model inputs, such as distances, slope and the initial land-use classes, plus the cell `id`, `row` and `col`) and the output column(s) the lab asks LuccME to save (`saveAttrs`, usually `d_out`). They are the checkpoint of the last year. They are also an input of the per-year generator, which takes the cell ids and `col`/`row` from this file and checks its own last year against it (see Suite A.2). Release `v1.0.0` (Zenodo) published these files.
 
